@@ -2,3 +2,5 @@ openwrt/
 *.log
 *.tar.gz
 artifacts/
+backup/
+*.bin
