@@ -1,0 +1,1788 @@
+Netcraze Ultra NC-1812 System Information
+============================================================
+Host: 192.168.1.1
+Date: 2026-07-26 12:00:43
+
+
+============================================================
+=== uname
+============================================================
+Linux Netcraze-4841 4.9-ndm-5 #0 SMP Tue Jul 21 17:23:11 2026 aarch64 GNU/Linux
+
+
+============================================================
+=== cpuinfo
+============================================================
+processor	: 0
+model name	: ARMv8 Processor rev 0 (v8l)
+BogoMIPS	: 26.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd09
+CPU revision	: 0
+
+processor	: 1
+model name	: ARMv8 Processor rev 0 (v8l)
+BogoMIPS	: 26.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd09
+CPU revision	: 0
+
+processor	: 2
+model name	: ARMv8 Processor rev 0 (v8l)
+BogoMIPS	: 26.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd09
+CPU revision	: 0
+
+
+
+============================================================
+=== meminfo
+============================================================
+MemTotal:        1015072 kB
+MemFree:          575748 kB
+MemAvailable:     655848 kB
+Buffers:           21688 kB
+Cached:            86248 kB
+SwapCached:            0 kB
+Active:            87956 kB
+Inactive:          57116 kB
+Active(anon):      37328 kB
+Inactive(anon):      104 kB
+Active(file):      50628 kB
+Inactive(file):    57012 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:        938876 kB
+SwapFree:         938876 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         37180 kB
+Mapped:            31488 kB
+Shmem:               304 kB
+Slab:              38580 kB
+SReclaimable:      12500 kB
+SUnreclaim:        26080 kB
+KernelStack:        3536 kB
+PageTables:          984 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1446412 kB
+Committed_AS:      91400 kB
+VmallocTotal:   263061440 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+
+
+============================================================
+=== version
+============================================================
+Linux version 4.9-ndm-5 (developers@netcraze.ru) (gcc version 14.3.0 (crosstool-NG 1.27.0_ndm_5.1_05356ea) ) #0 SMP Tue Jul 21 17:23:11 2026
+
+
+============================================================
+=== cmdline
+============================================================
+console=ttyS0,115200n1 loglevel=8 earlycon=uart8250,mmio32,0x11000000 pci=pcie_bus_perf
+
+
+============================================================
+=== mtd
+============================================================
+dev:    size   erasesize  name
+mtd0: 10000000 00020000 "spi32766.0"
+mtd1: 00080000 00020000 "Preloader"
+mtd2: 00200000 00020000 "U-Boot"
+mtd3: 00080000 00020000 "U-Config"
+mtd4: 00400000 00020000 "RF-EEPROM"
+mtd5: 00200000 00020000 "Kernel_1"
+mtd6: 03600000 00020000 "RootFS_1"
+mtd7: 03800000 00020000 "Firmware_1"
+mtd8: 00080000 00020000 "Config_1"
+mtd9: 00080000 00020000 "Dump"
+mtd10: 03800000 00020000 "Storage_A"
+mtd11: 00080000 00020000 "U-State"
+mtd12: 00080000 00020000 "D-State"
+mtd13: 00400000 00020000 "RF-EEPROM_res"
+mtd14: 03800000 00020000 "Firmware_2"
+mtd15: 00080000 00020000 "Config_2"
+mtd16: 03880000 00020000 "Storage_B"
+mtd17: 0f000000 00020000 "Full"
+mtd18: 07080000 00020000 "Storage"
+
+
+============================================================
+=== partitions
+============================================================
+major minor  #blocks  name
+
+  31        0     262144 mtdblock0
+  31        1        512 mtdblock1
+  31        2       2048 mtdblock2
+  31        3        512 mtdblock3
+  31        4       4096 mtdblock4
+  31        5       2048 mtdblock5
+  31        6      55296 mtdblock6
+  31        7      57344 mtdblock7
+  31        8        512 mtdblock8
+  31        9        512 mtdblock9
+  31       10      57344 mtdblock10
+  31       11        512 mtdblock11
+  31       12        512 mtdblock12
+  31       13       4096 mtdblock13
+  31       14      57344 mtdblock14
+  31       15        512 mtdblock15
+  31       16      57856 mtdblock16
+  31       17     245760 mtdblock17
+  31       18     115200 mtdblock18
+   8        0   30044160 sda
+   8        1     938880 sda1
+   8        2   29095936 sda2
+
+
+============================================================
+=== dev_mtd
+============================================================
+crw-------    1 root     root       90,   0 Jan  1  1970 /dev/mtd0
+crw-r-----    1 root     root       90,   1 Jul 25 21:23 /dev/mtd0ro
+crw-------    1 root     root       90,   2 Jan  1  1970 /dev/mtd1
+crw-------    1 root     root       90,  20 Jan  1  1970 /dev/mtd10
+crw-r-----    1 root     root       90,  21 Jul 25 21:23 /dev/mtd10ro
+crw-------    1 root     root       90,  22 Jan  1  1970 /dev/mtd11
+crw-r-----    1 root     root       90,  23 Jul 25 21:23 /dev/mtd11ro
+crw-------    1 root     root       90,  24 Jan  1  1970 /dev/mtd12
+crw-r-----    1 root     root       90,  25 Jul 25 21:23 /dev/mtd12ro
+crw-------    1 root     root       90,  26 Jan  1  1970 /dev/mtd13
+crw-r-----    1 root     root       90,  27 Jul 25 21:23 /dev/mtd13ro
+crw-------    1 root     root       90,  28 Jan  1  1970 /dev/mtd14
+crw-r-----    1 root     root       90,  29 Jul 25 21:23 /dev/mtd14ro
+crw-------    1 root     root       90,  30 Jan  1  1970 /dev/mtd15
+crw-r-----    1 root     root       90,  31 Jul 25 21:23 /dev/mtd15ro
+crw-------    1 root     root       90,  32 Jan  1  1970 /dev/mtd16
+crw-r-----    1 root     root       90,  33 Jul 25 21:23 /dev/mtd16ro
+crw-------    1 root     root       90,  34 Jan  1  1970 /dev/mtd17
+crw-r-----    1 root     root       90,  35 Jul 25 21:23 /dev/mtd17ro
+crw-------    1 root     root       90,  36 Jan  1  1970 /dev/mtd18
+crw-r-----    1 root     root       90,  37 Jul 25 21:23 /dev/mtd18ro
+crw-r-----    1 root     root       90,   3 Jul 25 21:23 /dev/mtd1ro
+crw-------    1 root     root       90,   4 Jan  1  1970 /dev/mtd2
+crw-r-----    1 root     root       90,   5 Jul 25 21:23 /dev/mtd2ro
+crw-------    1 root     root       90,   6 Jan  1  1970 /dev/mtd3
+crw-r-----    1 root     root       90,   7 Jul 25 21:23 /dev/mtd3ro
+crw-------    1 root     root       90,   8 Jan  1  1970 /dev/mtd4
+crw-r-----    1 root     root       90,   9 Jul 25 21:23 /dev/mtd4ro
+crw-------    1 root     root       90,  10 Jan  1  1970 /dev/mtd5
+crw-r-----    1 root     root       90,  11 Jul 25 21:23 /dev/mtd5ro
+crw-------    1 root     root       90,  12 Jan  1  1970 /dev/mtd6
+crw-r-----    1 root     root       90,  13 Jul 25 21:23 /dev/mtd6ro
+crw-------    1 root     root       90,  14 Jan  1  1970 /dev/mtd7
+crw-r-----    1 root     root       90,  15 Jul 25 21:23 /dev/mtd7ro
+crw-------    1 root     root       90,  16 Jan  1  1970 /dev/mtd8
+crw-r-----    1 root     root       90,  17 Jul 25 21:23 /dev/mtd8ro
+crw-------    1 root     root       90,  18 Jan  1  1970 /dev/mtd9
+crw-r-----    1 root     root       90,  19 Jul 25 21:23 /dev/mtd9ro
+brw-r-----    1 root     root       31,   0 Jul 25 21:23 /dev/mtdblock0
+brw-r-----    1 root     root       31,   1 Jul 25 21:23 /dev/mtdblock1
+brw-r-----    1 root     root       31,  10 Jul 25 21:23 /dev/mtdblock10
+brw-r-----    1 root     root       31,  11 Jul 25 21:23 /dev/mtdblock11
+brw-r-----    1 root     root       31,  12 Jul 25 21:23 /dev/mtdblock12
+brw-r-----    1 root     root       31,  13 Jul 25 21:23 /dev/mtdblock13
+brw-r-----    1 root     root       31,  14 Jul 25 21:23 /dev/mtdblock14
+brw-r-----    1 root     root       31,  15 Jul 25 21:23 /dev/mtdblock15
+brw-r-----    1 root     root       31,  16 Jul 25 21:23 /dev/mtdblock16
+brw-r-----    1 root     root       31,  17 Jul 25 21:23 /dev/mtdblock17
+brw-r-----    1 root     root       31,  18 Jul 25 21:23 /dev/mtdblock18
+brw-r-----    1 root     root       31,   2 Jul 25 21:23 /dev/mtdblock2
+brw-r-----    1 root     root       31,   3 Jul 25 21:23 /dev/mtdblock3
+brw-r-----    1 root     root       31,   4 Jul 25 21:23 /dev/mtdblock4
+brw-r-----    1 root     root       31,   5 Jul 25 21:23 /dev/mtdblock5
+brw-r-----    1 root     root       31,   6 Jul 25 21:23 /dev/mtdblock6
+brw-r-----    1 root     root       31,   7 Jul 25 21:23 /dev/mtdblock7
+brw-r-----    1 root     root       31,   8 Jul 25 21:23 /dev/mtdblock8
+brw-r-----    1 root     root       31,   9 Jul 25 21:23 /dev/mtdblock9
+
+/dev/mtdblock:
+drwxr-xr-x    2 root     root           420 Jan  1  1970 .
+drwxrwxrwt    8 root     root          2380 Jul 25 21:23 ..
+brw-------    1 root     root       31,   0 Jan  1  1970 0
+brw-------    1 root     root       31,   1 Jan  1  1970 1
+brw-------    1 root     root       31,  10 Jan  1  1970 10
+brw-------    1 root     root       31,  11 Jan  1  1970 11
+brw-------    1 root     root       31,  12 Jan  1  1970 12
+brw-------    1 root     root       31,  13 Jan  1  1970 13
+brw-------    1 root     root       31,  14 Jan  1  1970 14
+brw-------    1 root     root       31,  15 Jan  1  1970 15
+brw-------    1 root     root       31,  16 Jan  1  1970 16
+brw-------    1 root     root       31,  17 Jan  1  1970 17
+brw-------    1 root     root       31,  18 Jan  1  1970 18
+brw-------    1 root     root       31,   2 Jan  1  1970 2
+brw-------    1 root     root       31,   3 Jan  1  1970 3
+brw-------    1 root     root       31,   4 Jan  1  1970 4
+brw-------    1 root     root       31,   5 Jan  1  1970 5
+brw-------    1 root     root       31,   6 Jan  1  1970 6
+brw-------    1 root     root       31,   7 Jan  1  1970 7
+brw-------    1 root     root       31,   8 Jan  1  1970 8
+brw-------    1 root     root       31,   9 Jan  1  1970 9
+crw-------    1 root     root      241,   0 Jan  1  1970 /dev/ubi0
+crw-------    1 root     root      241,   1 Jan  1  1970 /dev/ubi0_0
+crw-------    1 root     root      241,   2 Jan  1  1970 /dev/ubi0_1
+crw-------    1 root     root       10,  58 Jan  1  1970 /dev/ubi_ctrl
+
+
+============================================================
+=== interrupts
+============================================================
+           CPU0       CPU1       CPU2       
+  2:          0          0          0     GICv3  29 Level     arch_timer
+  3:    3604164    4906165    4010447     GICv3  30 Level     arch_timer
+  7:       4637    4864803          0     GICv3 237 Level     mt7992-wed
+ 10:      34004          0          0     GICv3 243 Level     ccif_wo_isr
+ 17:          0          0          0     GICv3 106 Level     watchdog
+ 18:      19719          0          0     GICv3 155 Level     serial
+ 19:         35          0          0     GICv3 168 Level     i2c-mt65xx
+ 29:          0          0          0   mt-eint   2 Level     mt7988-phy
+111:          2          0          0     GICv3 241 Level     mt7988-gsw
+112:     162452          0          0     GICv3 221 Level     eth_rss, eth_lro
+113:        151     129298          0     GICv3 222 Level     eth_rss, eth_lro
+114:        149          0     141697     GICv3 223 Level     eth_rss, eth_lro
+115:     149975          0          0     GICv3 224 Level     eth_rss, eth_lro
+116:        172     697464          0     GICv3 229 Level     eth_qdma
+118:          1          0          0     GICv3 231 Level     eth_misc
+119:     767418          0          0     GICv3 172 Level     11007000.spi
+120:       1117          0       6550     GICv3 204 Level     xhci-hcd:usb1
+121:          1          0          0     GICv3 318 Level     mt7988-phy
+122:          0          0          0      INTx   0 Edge    -INTx      mt7992-vec_data0
+IPI0:    277972     428539     600445       Rescheduling interrupts
+IPI1:    235513      88863        191       Function call interrupts
+IPI2:         0          0          0       CPU stop interrupts
+IPI3:         0          0          0       Timer broadcast interrupts
+IPI4:         0          9          0       IRQ work interrupts
+IPI5:         0          0          0       CPU wake-up interrupts
+Err:          0
+
+
+============================================================
+=== iomem
+============================================================
+1000b000-1000bfff : eint
+1001c000-1001cfff : /watchdog@1001c000
+1001f000-1001ffff : gpio
+10217080-102170ff : /i2c@11003000
+11000000-1100001f : serial
+11003000-11003fff : /i2c@11003000
+11007000-110070ff : /spi@11007000
+1100a000-1100afff : /lvts@1100a000
+11200000-11202dff : mac
+11203e00-11203eff : ippc
+11300000-11301fff : pcie-mac
+11c10000-11c10fff : iocfg_tr
+11c50000-11c506ff : /t-phy-usb/usb-phy@11c50000
+11c50700-11c50fff : /t-phy-usb/usb-phy@11c50700
+11d00000-11d00fff : iocfg_br
+11d20000-11d20fff : iocfg_rb
+11e00000-11e00fff : iocfg_lb
+11f00000-11f00fff : iocfg_tl
+11f50000-11f50fff : /efuse@11f50000
+15010000-15011fff : /wed@15010000
+15100000-1510ffff : 15100000.ethernet
+30200000-37ffffff : /pcie@11300000
+  30200000-304fffff : PCI Bus 0000:01
+    30200000-303fffff : 0000:01:00.0
+      30200000-303fffff : 0000:01:00.0
+    30400000-30407fff : 0000:01:00.0
+  30500000-30507fff : 0000:00:00.0
+40000000-42ffffff : System RAM
+43000000-4307ffff : reserved
+43080000-4f5fffff : System RAM
+  48080000-4855ffff : Kernel code
+  485b0000-4863ffff : Kernel data
+4f600000-4f6bffff : reserved
+4f6c0000-4f6fffff : System RAM
+4f700000-4fefffff : reserved
+4ff00000-7fffffff : System RAM
+
+
+============================================================
+=== modules
+============================================================
+
+xt_connbytes 1949 4 - Live 0xffffff8001054000
+xt_multiport 2204 9 - Live 0xffffff8001050000
+nf_nat_sip 9130 0 - Live 0xffffff8001046000
+nf_conntrack_sip 22875 1 nf_nat_sip, Live 0xffffff800103c000
+fastvpn 247323 0 - Live 0xffffff8000ff7000 (PO)
+hw_nat 57278 0 - Live 0xffffff8000fe4000 (PO)
+igmpsn 13630 0 - Live 0xffffff8000fdc000 (PO)
+xhci_mtk 7272 0 - Live 0xffffff8000fd7000
+xhci_hcd 109758 1 xhci_mtk, Live 0xffffff8000fb6000
+nf_nat_ftp 2173 0 - Live 0xffffff8000fb2000
+nf_conntrack_ftp 6977 1 nf_nat_ftp, Live 0xffffff8000fad000
+ntc 56095 2 - Live 0xffffff8000f9a000 (PO)
+ubifs 265752 1 - Live 0xffffff8000f4e000
+ubi 109941 2 ubifs, Live 0xffffff8000f2b000
+mtk_hwifi 239846 0 - Live 0xffffff8000ee2000 (O)
+mt7993_ap 3600210 5 mtk_hwifi, Live 0xffffff8000b00000 (PO)
+mt7988_eth 388710 3 hw_nat,mtk_hwifi,mt7993_ap, Live 0xffffff8000a96000 (PO)
+nacct 33420 0 - Live 0xffffff8000a89000 (PO)
+rndis_host 8006 0 - Live 0xffffff8000a83000
+qcserial 7306 0 - Live 0xffffff8000a7c000
+cdc_ether 7397 1 rndis_host, Live 0xffffff8000a76000
+uas 15322 0 - Live 0xffffff8000a6e000
+huawei_cdc_ncm 3020 0 - Live 0xffffff8000a6a000
+qmi_wwan 19434 0 - Live 0xffffff8000a5d000
+option 46662 0 - Live 0xffffff8000a3f000
+cdc_ncm 20221 1 huawei_cdc_ncm, Live 0xffffff8000a35000
+usb_wwan 5958 2 qcserial,option, Live 0xffffff8000a2f000
+usbextras 3807 0 - Live 0xffffff8000a2b000 (O)
+exfat 68447 0 - Live 0xffffff8000a14000 (O)
+nls_utf8 1630 0 - Live 0xffffff8000a10000
+esp4 7223 0 - Live 0xffffff8000a0b000
+zstd 2350 1 - Live 0xffffff8000a07000
+thfsplus 103650 0 - Live 0xffffff80009e6000 (O)
+nf_nat_rtsp 5208 0 - Live 0xffffff80009e1000 (O)
+nls_cp1251 5344 0 - Live 0xffffff80009dc000
+usb_storage 56819 4 uas, Live 0xffffff80009c4000
+cdc_acm 18786 0 - Live 0xffffff80009ba000
+l2tp_ppp 17790 0 - Live 0xffffff80009b1000
+usblp 11812 0 - Live 0xffffff80009aa000
+sd_mod 30839 3 - Live 0xffffff800099d000
+sr_mod 15275 0 - Live 0xffffff8000995000
+nls_cp437 6111 0 - Live 0xffffff8000990000
+sierra 9239 0 - Live 0xffffff8000989000
+sg 24311 0 - Live 0xffffff800097e000
+usbnet 22253 5 rndis_host,cdc_ether,huawei_cdc_ncm,qmi_wwan,cdc_ncm, Live 0xffffff8000973000
+ext4 389448 1 - Live 0xffffff8000900000
+tfat 314157 0 - Live 0xffffff80008a7000 (PO)
+zstd_decompress 60716 1 zstd, Live 0xffffff8000893000
+xfrm_user 26016 0 - Live 0xffffff8000888000
+deflate 2493 1 - Live 0xffffff8000884000
+nls_cp866 5599 0 - Live 0xffffff800087f000
+tntfs 477467 0 - Live 0xffffff80007f9000 (PO)
+af_key 29557 0 - Live 0xffffff80007ec000
+jffs2 102948 0 - Live 0xffffff80007ca000
+cdc_wdm 10853 2 huawei_cdc_ncm,qmi_wwan, Live 0xffffff80007c3000
+l2tp_core 17959 1 l2tp_ppp, Live 0xffffff80007ba000
+zstd_compress 162093 1 zstd, Live 0xffffff800078d000
+usbserial 23846 4 qcserial,option,usb_wwan,sierra, Live 0xffffff8000781000
+nf_nat_pptp 2504 0 - Live 0xffffff800077d000
+nf_nat_h323 7005 0 - Live 0xffffff8000778000
+usbcore 171835 19 xhci_mtk,xhci_hcd,rndis_host,qcserial,cdc_ether,uas,huawei_cdc_ncm,qmi_wwan,option,cdc_ncm,usb_wwan,usbextras,usb_storage,cdc_acm,usblp,sierra,usbnet,cdc_wdm,usbserial, Live 0xffffff800073f000
+nf_conntrack_pptp 4374 1 nf_nat_pptp, Live 0xffffff800073a000
+wireguard 117880 0 - Live 0xffffff8000715000
+oid_registry 2718 0 - Live 0xffffff8000711000
+xfrm_interface 9671 0 - Live 0xffffff800070a000
+authenc 5147 0 - Live 0xffffff8000705000
+crc32c_generic 2470 0 - Live 0xffffff8000701000
+cdrom 30318 1 sr_mod, Live 0xffffff80006f5000
+resetnds 1780 0 - Live 0xffffff80006f1000 (PO)
+hmac 3847 0 - Live 0xffffff80006ed000
+des_generic 16948 0 - Live 0xffffff80006e5000
+mtdoops_proc 8077 0 - Live 0xffffff80006e0000 (O)
+nf_dup_ipv4 1496 0 - Live 0xffffff80006dc000
+jitterentropy_rng 6944 0 - Live 0xffffff80006d7000
+nfnetlink_log 8499 0 - Live 0xffffff80006d0000
+compat_xtables 1110 0 - Live 0xffffff80006cc000 (O)
+cfq_iosched 26681 0 - Live 0xffffff80006c1000
+nf_conntrack_h323 42208 1 nf_nat_h323, Live 0xffffff80006b0000
+xt_esp 1502 0 - Live 0xffffff80006ac000
+xt_CT 4057 0 - Live 0xffffff80006a8000
+zlib_deflate 20042 2 deflate,jffs2, Live 0xffffff80006a0000
+xt_NFQUEUE 4060 11 - Live 0xffffff800069c000
+jbd2 68423 1 ext4, Live 0xffffff8000683000
+nat46 29499 0 - Live 0xffffff8000677000 (O)
+nls_base 7670 9 exfat,nls_utf8,thfsplus,nls_cp1251,nls_cp437,tfat,nls_cp866,tntfs,usbcore, Live 0xffffff8000672000
+ip6_udp_tunnel 2058 2 l2tp_core,wireguard, Live 0xffffff800066e000
+xxhash 5022 2 zstd_decompress,zstd_compress, Live 0xffffff8000669000
+sch_cake 28141 0 - Live 0xffffff800065e000 (O)
+nfnetlink_queue 12138 3 - Live 0xffffff8000657000
+mt7993_osal 33302 2 mtk_hwifi,mt7993_ap, Live 0xffffff8000644000 (O)
+nf_conntrack_proto_gre 4316 1 nf_conntrack_pptp, Live 0xffffff800063f000
+phr 76436 3 mt7993_ap, Live 0xffffff8000625000 (PO)
+mbcache 5647 2 ext4, Live 0xffffff8000620000
+nf_conntrack_rtsp 5668 1 nf_nat_rtsp, Live 0xffffff800061b000 (O)
+echainiv 2248 0 - Live 0xffffff8000617000
+xt_policy 2832 0 - Live 0xffffff8000613000
+ndm_storage 1839 0 - Live 0xffffff800060f000
+dummy 4373 0 - Live 0xffffff800060a000
+ip_gre 15044 0 - Live 0xffffff8000602000
+crc_itu_t 1494 0 - Live 0xffffff80005fe000
+xt_WGOBFS 5823 0 - Live 0xffffff80005f9000 (O)
+warp 205246 1 mtk_hwifi, Live 0xffffff80005bc000 (O)
+zlib_inflate 13992 2 deflate,jffs2, Live 0xffffff80005b5000
+crc16 1490 2 ubifs,ext4, Live 0xffffff80005b1000
+loop 18227 0 - Live 0xffffff80005a7000
+nf_dup_ipv6 1496 0 - Live 0xffffff80005a3000
+xfrm4_mode_tunnel 2054 0 - Live 0xffffff800059f000
+xt_NETMAP 1951 0 - Live 0xffffff800059b000
+md5 2759 0 - Live 0xffffff8000597000
+veth 5941 0 - Live 0xffffff8000592000
+scsi_mod 110792 5 uas,usb_storage,sd_mod,sr_mod,sg, Live 0xffffff8000567000
+udp_tunnel 3242 2 l2tp_core,wireguard, Live 0xffffff8000563000
+deadline_iosched 5268 0 - Live 0xffffff800055e000
+xfrm4_mode_transport 1536 0 - Live 0xffffff800055a000
+cbc 3022 0 - Live 0xffffff8000556000
+tsmb 631945 1 - Live 0xffffff80004a1000 (PO)
+drbg 18250 0 - Live 0xffffff8000498000
+usb_common 3610 1 usbcore, Live 0xffffff8000494000
+sit 14609 0 - Live 0xffffff800048c000
+nf_nat_proto_gre 1827 1 nf_nat_pptp, Live 0xffffff8000488000
+md4 4007 0 - Live 0xffffff8000484000
+fuse 96617 0 - Live 0xffffff8000463000
+xfrm_algo 6360 3 esp4,xfrm_user,af_key, Live 0xffffff800045e000
+ip_set_list_set 8437 0 - Live 0xffffff8000458000
+xfrm4_tunnel 2175 0 - Live 0xffffff8000454000
+grace 2476 0 - Live 0xffffff8000450000
+
+
+============================================================
+=== network_interfaces
+============================================================
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop qlen 1
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop qlen 1
+    link/tunnel6 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00 brd 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop qlen 1
+    link/sit 0.0.0.0 brd 0.0.0.0
+5: gre0@NONE: <NOARP> mtu 1476 qdisc noop qlen 1
+    link/gre 0.0.0.0 brd 0.0.0.0
+6: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+7: ethoip0@NONE: <BROADCAST,MULTICAST> mtu 1458 qdisc noop qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+8: dummy0: <BROADCAST,NOARP> mtu 1500 qdisc noop qlen 1000
+    link/ether 46:3e:83:e1:91:65 brd ff:ff:ff:ff:ff:ff
+9: ezcfg0: <NO-CARRIER,POINTOPOINT,MULTICAST,NOARP,UP> mtu 1500 qdisc fq_codel qlen 500
+    link/[65534] 
+    inet 198.51.100.37/32 scope global ezcfg0
+       valid_lft forever preferred_lft forever
+    inet6 2001:2::c633:6425/128 scope global 
+       valid_lft forever preferred_lft forever
+10: eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq qlen 2000
+    link/ether d4:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::d69c:53ff:fe20:fdf3/64 scope link 
+       valid_lft forever preferred_lft forever
+11: eth3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel qlen 2000
+    link/ether d4:9c:53:20:fd:f4 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.4/24 brd 192.168.0.255 scope global eth3
+       valid_lft forever preferred_lft forever
+    inet6 fe80::d69c:53ff:fe20:fdf4/64 scope link 
+       valid_lft forever preferred_lft forever
+12: eth4: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel master br0 qlen 2000
+    link/ether d4:9c:53:20:fd:f5 brd ff:ff:ff:ff:ff:ff
+13: ra0: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel master br0 qlen 1000
+    link/ether d4:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+14: rai0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br0 qlen 1000
+    link/ether d4:9c:53:20:fd:f6 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::d69c:53ff:fe20:fdf6/64 scope link 
+       valid_lft forever preferred_lft forever
+15: ra1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br0 qlen 1000
+    link/ether d6:9c:53:10:fd:f3 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::d49c:53ff:fe10:fdf3/64 scope link 
+       valid_lft forever preferred_lft forever
+16: ra2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:00:fd:f3 brd ff:ff:ff:ff:ff:ff
+17: ra3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:30:fd:f3 brd ff:ff:ff:ff:ff:ff
+18: ra4: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:40:fd:f3 brd ff:ff:ff:ff:ff:ff
+19: ra5: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:50:fd:f3 brd ff:ff:ff:ff:ff:ff
+20: ra6: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:60:fd:f3 brd ff:ff:ff:ff:ff:ff
+21: ra7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel qlen 1000
+    link/ether d6:9c:53:70:fd:f3 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::d49c:53ff:fe70:fdf3/64 scope link 
+       valid_lft forever preferred_lft forever
+22: apcli0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d2:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+23: rai1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:10:fd:f6 brd ff:ff:ff:ff:ff:ff
+24: rai2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:00:fd:f6 brd ff:ff:ff:ff:ff:ff
+25: rai3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:30:fd:f6 brd ff:ff:ff:ff:ff:ff
+26: rai4: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:40:fd:f6 brd ff:ff:ff:ff:ff:ff
+27: rai5: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:50:fd:f6 brd ff:ff:ff:ff:ff:ff
+28: rai6: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d6:9c:53:60:fd:f6 brd ff:ff:ff:ff:ff:ff
+29: rai7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel qlen 1000
+    link/ether d6:9c:53:70:fd:f6 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::d49c:53ff:fe70:fdf6/64 scope link 
+       valid_lft forever preferred_lft forever
+30: apclii0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether d2:9c:53:20:fd:f6 brd ff:ff:ff:ff:ff:ff
+31: eth2.1@eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br0 
+    link/ether d4:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::d69c:53ff:fe20:fdf3/64 scope link 
+       valid_lft forever preferred_lft forever
+32: br0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue 
+    link/ether d4:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.1/24 brd 192.168.1.255 scope global br0
+       valid_lft forever preferred_lft forever
+    inet6 fdb9:fb55:41e5:0:d69c:53ff:fe20:fdf3/64 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::d69c:53ff:fe20:fdf3/64 scope link 
+       valid_lft forever preferred_lft forever
+33: ra7.1@ra7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br0 qlen 1000
+    link/ether d6:9c:53:70:fd:f3 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::d49c:53ff:fe70:fdf3/64 scope link 
+       valid_lft forever preferred_lft forever
+34: rai7.1@rai7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br0 qlen 1000
+    link/ether d6:9c:53:70:fd:f6 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::d49c:53ff:fe70:fdf6/64 scope link 
+       valid_lft forever preferred_lft forever
+
+
+============================================================
+=== network_dev
+============================================================
+Inter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed
+   br0: 187731567  688808    0   10    0     0          0     51262 648472388  788324    0    0    0     0       0          0
+  rai5:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ra2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  rai4:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+apcli0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  rai1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  gre0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ra3:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  sit0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ra1: 1193088   10232    0    0    0     0          0         0   551936    5182  183  183    0     0       0          0
+  rai3:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ip6tnl0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+    lo: 5888740   70569    0    0    0     0          0         0  5888740   70569    0    0    0     0       0          0
+  rai2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ethoip0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  rai0: 312963360 2013056 227715    0    0     0          0         0 11383430944 9677727 321558 321558    0     0       0          0
+   ra0:       0       0  157    0    0     0          0         0        0       0    0    0    0     0       0          0
+ tunl0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+apclii0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ra5:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ra4:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+dummy0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ra7:       0       0    0  350    0     0          0         0        0       0    0    0    0     0       0          0
+ezcfg0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+gretap0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ra6:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  eth4:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  rai7:       0       0    0  344    0     0          0         0        0       0    0    0    0     0       0          0
+  eth2: 11176019663 118850354    0    0    0     0          0     22309 239280754996 159307408    0    0    0     0       0          0
+ ra7.1:       0       0    0    0    0     0          0         0 15716691  209442    0    0    0     0       0          0
+eth2.1: 66304443  118351    0    3    0     0          0     22309 131501255  280288    0    0    0     0       0          0
+rai7.1:       0       0    0    0    0     0          0         0 15716691  209442    0    0    0     0       0          0
+  eth3: 252401056528 169665335    0    0    0     0          0      2841 10860532606 119201319    0    0    0     0       0          0
+  rai6:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+
+
+============================================================
+=== wireless
+============================================================
+no iw/iwinfo
+
+
+============================================================
+=== wireless_proc
+============================================================
+Inter-| sta-|   Quality        |   Discarded packets               | Missed | WE
+ face | tus | link level noise |  nwid  crypt   frag  retry   misc | beacon | 22
+   ra0: 0000   10.  -256   -44        0      0      0      0      0        0
+  rai0: 0000   10.  -256   -59        0      0      0      0      0        0
+   ra1: 0000   10.  -256   -44        0      0      0      0      0        0
+   ra2: 0000   10.  -256   -44        0      0      0      0      0        0
+   ra3: 0000   10.  -256   -44        0      0      0      0      0        0
+   ra4: 0000   10.  -256   -44        0      0      0      0      0        0
+   ra5: 0000   10.  -256   -44        0      0      0      0      0        0
+   ra6: 0000   10.  -256   -44        0      0      0      0      0        0
+   ra7: 0000   10.  -256   -44        0      0      0      0      0        0
+apcli0: 0000   10.  -256   -44        0      0      0      0      0        0
+  rai1: 0000   10.  -256   -59        0      0      0      0      0        0
+  rai2: 0000   10.  -256   -59        0      0      0      0      0        0
+  rai3: 0000   10.  -256   -59        0      0      0      0      0        0
+  rai4: 0000   10.  -256   -59        0      0      0      0      0        0
+  rai5: 0000   10.  -256   -59        0      0      0      0      0        0
+  rai6: 0000   10.  -256   -59        0      0      0      0      0        0
+  rai7: 0000   10.  -256   -59        0      0      0      0      0        0
+apclii0: 0000   10.  -256   -59        0      0      0      0      0        0
+
+
+============================================================
+=== gpio_chips
+============================================================
+gpiochip0: GPIOs 428-511, parent: platform/1001f000.pinctrl, pinctrl_moore:
+ gpio-435 (                    |wifi-reset          ) out hi    
+
+
+============================================================
+=== gpio_base
+============================================================
+no /sys/class/gpio
+
+
+============================================================
+=== gpio_chip_labels
+============================================================
+/sys/class/gpio/gpiochip*/label: 
+
+
+============================================================
+=== gpio_chip_base
+============================================================
+/sys/class/gpio/gpiochip*/base: 
+
+
+============================================================
+=== gpio_chip_ngpio
+============================================================
+/sys/class/gpio/gpiochip*/ngpio: 
+
+
+============================================================
+=== leds
+============================================================
+/sys/class/leds/*/trigger: 
+
+
+============================================================
+=== leds_brightness
+============================================================
+/sys/class/leds/*/brightness: 
+
+
+============================================================
+=== usb
+============================================================
+Bus 002 Device 002: ID 0781:5581 USB SanDisk 3.2Gen1
+Bus 001 Device 001: ID 1d6b:0002 Linux 4.9-ndm-5 xhci-hcd xHCI Host Controller
+Bus 001 Device 002: ID 05e3:0608 USB2.0 Hub
+Bus 002 Device 001: ID 1d6b:0003 Linux 4.9-ndm-5 xhci-hcd xHCI Host Controller
+
+T:  Bus=01 Lev=00 Prnt=00 Port=00 Cnt=00 Dev#=  1 Spd=480  MxCh= 1
+B:  Alloc=  0/800 us ( 0%), #Int=  0, #Iso=  0
+D:  Ver= 2.00 Cls=09(hub  ) Sub=00 Prot=01 MxPS=64 #Cfgs=  1
+P:  Vendor=1d6b ProdID=0002 Rev= 4.09
+S:  Manufacturer=Linux 4.9-ndm-5 xhci-hcd
+S:  Product=xHCI Host Controller
+S:  SerialNumber=11200000.xhci
+C:* #Ifs= 1 Cfg#= 1 Atr=e0 MxPwr=  0mA
+I:* If#= 0 Alt= 0 #EPs= 1 Cls=09(hub  ) Sub=00 Prot=00 Driver=hub
+E:  Ad=81(I) Atr=03(Int.) MxPS=   4 Ivl=256ms
+
+T:  Bus=01 Lev=01 Prnt=01 Port=00 Cnt=01 Dev#=  2 Spd=480  MxCh= 2
+D:  Ver= 2.00 Cls=09(hub  ) Sub=00 Prot=01 MxPS=64 #Cfgs=  1
+P:  Vendor=05e3 ProdID=0608 Rev=60.70
+S:  Product=USB2.0 Hub
+C:* #Ifs= 1 Cfg#= 1 Atr=e0 MxPwr=100mA
+I:* If#= 0 Alt= 0 #EPs= 1 Cls=09(hub  ) Sub=00 Prot=00 Driver=hub
+E:  Ad=81(I) Atr=03(Int.) MxPS=   1 Ivl=256ms
+
+T:  Bus=02 Lev=00 Prnt=00 Port=00 Cnt=00 Dev#=  1 Spd=10000 MxCh= 1
+B:  Alloc=  0/800 us ( 0%), #Int=  0, #Iso=  0
+D:  Ver= 3.10 Cls=09(hub  ) Sub=00 Prot=03 MxPS= 9 #Cfgs=  1
+P:  Vendor=1d6b ProdID=0003 Rev= 4.09
+S:  Manufacturer=Linux 4.9-ndm-5 xhci-hcd
+S:  Product=xHCI Host Controller
+S:  SerialNumber=11200000.xhci
+C:* #Ifs= 1 Cfg#= 1 Atr=e0 MxPwr=  0mA
+I:* If#= 0 Alt= 0 #EPs= 1 Cls=09(hub  ) Sub=00 Prot=00 Driver=hub
+E:  Ad=81(I) Atr=03(Int.) MxPS=   4 Ivl=256ms
+
+T:  Bus=02 Lev=01 Prnt=01 Port=00 Cnt=01 Dev#=  2 Spd=5000 MxCh= 0
+D:  Ver= 3.20 Cls=00(>ifc ) Sub=00 Prot=00 MxPS= 9 #Cfgs=  1
+P:  Vendor=0781 ProdID=5581 Rev= 1.00
+S:  Manufacturer= USB
+S:  Product= SanDisk 3.2Gen1
+S:  SerialNumber=0401639a0d5fa670ff54178b3ba4d26838583f289a857f359ea95876482501cd0af0000000000000000000006aaa16cfff06
+C:* #Ifs= 1 Cfg#= 1 Atr=80 MxPwr=896mA
+I:* If#= 0 Alt= 0 #EPs= 2 Cls=08(stor.) Sub=06 Prot=50 Driver=usb-storage
+E:  Ad=81(I) Atr=02(Bulk) MxPS=1024 Ivl=0ms
+E:  Ad=02(O) Atr=02(Bulk) MxPS=1024 Ivl=0ms
+
+
+============================================================
+=== usb_devices
+============================================================
+crw-rw-rw-    1 root     root        5,   0 Jan  1  1970 /dev/tty
+crw-------    1 root     root        4,  64 Jan  1  1970 /dev/ttyS0
+crw-------    1 root     root        4,  65 Jan  1  1970 /dev/ttyS1
+
+
+============================================================
+=== block
+============================================================
+drwxr-xr-x    2 root     root             0 Jul 25 21:23 .
+dr-xr-xr-x   11 root     root             0 Jan  1  1970 ..
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 loop0 -> ../devices/virtual/block/loop0
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 loop1 -> ../devices/virtual/block/loop1
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 loop2 -> ../devices/virtual/block/loop2
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 loop3 -> ../devices/virtual/block/loop3
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 loop4 -> ../devices/virtual/block/loop4
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 loop5 -> ../devices/virtual/block/loop5
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 loop6 -> ../devices/virtual/block/loop6
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 loop7 -> ../devices/virtual/block/loop7
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock0 -> ../devices/platform/11007000.spi/spi_master/spi32766/spi32766.0/mtd/mtd0/mtdblock0
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock1 -> ../devices/platform/nmbm_spim_nand/mtd/mtd1/mtdblock1
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock10 -> ../devices/platform/nmbm_spim_nand/mtd/mtd10/mtdblock10
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock11 -> ../devices/platform/nmbm_spim_nand/mtd/mtd11/mtdblock11
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock12 -> ../devices/platform/nmbm_spim_nand/mtd/mtd12/mtdblock12
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock13 -> ../devices/platform/nmbm_spim_nand/mtd/mtd13/mtdblock13
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock14 -> ../devices/platform/nmbm_spim_nand/mtd/mtd14/mtdblock14
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock15 -> ../devices/platform/nmbm_spim_nand/mtd/mtd15/mtdblock15
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock16 -> ../devices/platform/nmbm_spim_nand/mtd/mtd16/mtdblock16
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock17 -> ../devices/platform/nmbm_spim_nand/mtd/mtd17/mtdblock17
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock18 -> ../devices/virtual/mtd/mtd18/mtdblock18
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock2 -> ../devices/platform/nmbm_spim_nand/mtd/mtd2/mtdblock2
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock3 -> ../devices/platform/nmbm_spim_nand/mtd/mtd3/mtdblock3
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock4 -> ../devices/platform/nmbm_spim_nand/mtd/mtd4/mtdblock4
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock5 -> ../devices/platform/nmbm_spim_nand/mtd/mtd5/mtdblock5
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock6 -> ../devices/platform/nmbm_spim_nand/mtd/mtd6/mtdblock6
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock7 -> ../devices/platform/nmbm_spim_nand/mtd/mtd7/mtdblock7
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock8 -> ../devices/platform/nmbm_spim_nand/mtd/mtd8/mtdblock8
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 mtdblock9 -> ../devices/platform/nmbm_spim_nand/mtd/mtd9/mtdblock9
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 sda -> ../devices/platform/11200000.xhci/usb2/2-1/2-1:1.0/host0/target0:0:0/0:0:0:0/block/sda
+
+
+============================================================
+=== dmseg
+============================================================
+Booting Linux on physical CPU 0x0
+Linux version 4.9-ndm-5 (developers@netcraze.ru) (gcc version 14.3.0 (crosstool-NG 1.27.0_ndm_5.1_05356ea) ) #0 SMP Tue Jul 21 17:23:11 2026
+Boot CPU: AArch64 Processor [411fd090]
+Machine model: Netcraze NC-1812
+earlycon: uart8250 at MMIO32 0x0000000011000000 (options '')
+bootconsole [uart8250] enabled
+On node 0 totalpages: 262144
+  DMA zone: 4096 pages used for memmap
+  DMA zone: 0 pages reserved
+  DMA zone: 262144 pages, LIFO batch:31
+psci: probing for conduit method from DT.
+psci: PSCIv1.1 detected in firmware.
+psci: Using standard PSCI v0.2 function IDs
+psci: MIGRATE_INFO_TYPE not supported.
+psci: SMC Calling Convention v1.0
+percpu: Embedded 19 pages/cpu s40344 r8192 d29288 u77824
+pcpu-alloc: s40344 r8192 d29288 u77824 alloc=19*4096
+pcpu-alloc: [0] 0 [0] 1 [0] 2 
+Detected VIPT I-cache on CPU0
+CPU features: enabling workaround for Spectre-BHB
+CPU features: enabling workaround for ARM erratum 858921
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 258048
+Kernel command line: console=ttyS0,115200n1 loglevel=8 earlycon=uart8250,mmio32,0x11000000 pci=pcie_bus_perf
+PID hash table entries: 4096 (order: 3, 32768 bytes)
+Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+Memory: 1014752K/1048576K available (3902K kernel code, 294K rwdata, 1032K rodata, 320K init, 260K bss, 33824K reserved, 0K cma-reserved)
+Virtual kernel memory layout:
+    modules : 0xffffff8000000000 - 0xffffff8008000000   (   128 MB)
+    vmalloc : 0xffffff8008000000 - 0xffffffbebfff0000   (   250 GB)
+      .text : 0x        (ptrval) - 0x        (ptrval)   (  3904 KB)
+    .rodata : 0x        (ptrval) - 0x        (ptrval)   (  1088 KB)
+      .init : 0x        (ptrval) - 0x        (ptrval)   (   320 KB)
+      .data : 0x        (ptrval) - 0x        (ptrval)   (   295 KB)
+       .bss : 0x        (ptrval) - 0x        (ptrval)   (   261 KB)
+    fixed   : 0xffffffbefe7fd000 - 0xffffffbefec00000   (  4108 KB)
+    PCI I/O : 0xffffffbefee00000 - 0xffffffbeffe00000   (    16 MB)
+    vmemmap : 0xffffffbf00000000 - 0xffffffc000000000   (     4 GB maximum)
+              0xffffffbf00000000 - 0xffffffbf01000000   (    16 MB actual)
+    memory  : 0xffffffc000000000 - 0xffffffc040000000   (  1024 MB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=3, Nodes=1
+Hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 64.
+NR_IRQS:64 nr_irqs:64 0
+GICv3: GIC: Using split EOI/Deactivate mode
+GICv3: CPU0: found redistributor 0 region 0:0x000000000c080000
+arm_arch_timer: Enabling local workaround for ARM erratum 858921
+arm_arch_timer: Architected cp15 timer(s) running at 13.00MHz (phys).
+clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x2ff89eacb, max_idle_ns: 440795202429 ns
+sched_clock: 56 bits at 13MHz, resolution 76ns, wraps every 4398046511101ns
+Calibrating delay loop (skipped), value calculated using timer frequency.. 26.00 BogoMIPS (lpj=52000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+sched-energy: CPU device node has no sched-energy-costs
+ASID allocator initialised with 65536 entries
+Detected VIPT I-cache on CPU1
+GICv3: CPU1: found redistributor 1 region 0:0x000000000c0a0000
+CPU1: Booted secondary processor [411fd090]
+Detected VIPT I-cache on CPU2
+GICv3: CPU2: found redistributor 2 region 0:0x000000000c0c0000
+CPU2: Booted secondary processor [411fd090]
+Brought up 3 CPUs
+SMP: Total of 3 processors activated.
+CPU features: detected feature: GIC system register CPU interface
+CPU features: detected feature: 32-bit EL0 Support
+CPU: All CPU(s) started at EL2
+alternatives: patching kernel code
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+futex hash table entries: 1024 (order: 5, 131072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic allocations
+clocksource: Switched to clocksource arch_sys_counter
+NET: Registered protocol family 2
+IP idents hash table entries: 16384 (order: 5, 131072 bytes)
+TCP established hash table entries: 131072 (order: 8, 1048576 bytes)
+TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+PCI: CLS 0 bytes, default 128
+workingset: timestamp_bits=61 max_order=18 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+io scheduler noop registered (default)
+OF: PCI: host bridge /pcie@11300000 ranges:
+OF: PCI:    IO 0x30000000..0x301fffff -> 0x30000000
+OF: PCI:   MEM 0x30200000..0x37ffffff -> 0x30200000
+mtk-pcie-gen3 11300000.pcie: PCI host bridge to bus 0000:00
+pci_bus 0000:00: root bus resource [bus 00-ff]
+pci_bus 0000:00: root bus resource [io  0x0000-0x1fffff] (bus address [0x30000000-0x301fffff])
+pci_bus 0000:00: root bus resource [mem 0x30200000-0x37ffffff]
+pci 0000:00:00.0: [14c3:7988] type 01 class 0x060400
+pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x00007fff 64bit]
+pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+pci 0000:01:00.0: [14c3:7992] type 00 class 0x028000
+pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x001fffff 64bit]
+pci 0000:01:00.0: reg 0x18: [mem 0x00000000-0x00007fff 64bit]
+pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+pci 0000:00:00.0: BAR 8: assigned [mem 0x30200000-0x304fffff]
+pci 0000:00:00.0: BAR 0: assigned [mem 0x30500000-0x30507fff 64bit]
+pci 0000:01:00.0: BAR 0: assigned [mem 0x30200000-0x303fffff 64bit]
+pci 0000:01:00.0: BAR 2: assigned [mem 0x30400000-0x30407fff 64bit]
+pci 0000:00:00.0: PCI bridge to [bus 01]
+pci 0000:00:00.0:   bridge window [mem 0x30200000-0x304fffff]
+pci 0000:00:00.0: Max Payload Size set to  256/ 256 (was  128), Max Read Rq  256
+pci 0000:01:00.0: Max Payload Size set to  256/ 256 (was  128), Max Read Rq  256
+pcieport 0000:00:00.0: enabling device (0000 -> 0002)
+Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+console [ttyS0] disabled
+11000000.serial: ttyS0 at MMIO 0x11000000 (irq = 18, base_baud = 2500000) is a ST16650V2
+console [ttyS0] enabled
+bootconsole [uart8250] disabled
+mtk_rng rng-arm-smccc: registered RNG driver
+random: crng init done
+ndmpart: registering the NDM partition parser...
+spi-nand spi32766.0: Fudan Micro FM25G02B SPI NAND was found by ID probe
+spi-nand spi32766.0: 256 MiB, block size: 128 KiB, page size: 2048, OOB size: 128
+nmbm nmbm_spim_nand: Signature found at block 2043 [0x0ff60000]
+nmbm nmbm_spim_nand: First info table with writecount 1 found in block 1920
+nmbm nmbm_spim_nand: Second info table with writecount 1 found in block 1923
+nmbm nmbm_spim_nand: NMBM has been successfully attached 
+di: active = 1, backup = 2, current = 1
+17 ndmpart partitions found on MTD device nmbm_spim_nand
+mtd: creating 17 MTD partitions on "nmbm_spim_nand":
+0x000000000000-0x000000080000 : "Preloader"
+0x000000080000-0x000000280000 : "U-Boot"
+0x000000280000-0x000000300000 : "U-Config"
+0x000000300000-0x000000700000 : "RF-EEPROM"
+0x000000700000-0x000000900000 : "Kernel_1"
+0x000000900000-0x000003f00000 : "RootFS_1"
+mtd: device 6 (RootFS_1) set to be root filesystem
+0x000000700000-0x000003f00000 : "Firmware_1"
+0x000003f00000-0x000003f80000 : "Config_1"
+0x000003f80000-0x000004000000 : "Dump"
+0x000004000000-0x000007800000 : "Storage_A"
+0x000007800000-0x000007880000 : "U-State"
+0x000007a80000-0x000007b00000 : "D-State"
+0x000007b00000-0x000007f00000 : "RF-EEPROM_res"
+0x000007f00000-0x00000b700000 : "Firmware_2"
+0x00000b700000-0x00000b780000 : "Config_2"
+0x00000b780000-0x00000f000000 : "Storage_B"
+0x000000000000-0x00000f000000 : "Full"
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+PPP generic driver version 2.4.2
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+PPTP driver version 0.8.5
+vcore: supplied by rt5190a-buck1
+proc: supplied by rt5190a-buck1
+rt5190a-buck4: supplied by rt5190a-buck1
+mtk-soc-temp-lvts 1100a000.lvts: lvts0: read all 4 sensors in 10080 us, one in 2404 us
+mtk-soc-temp-lvts 1100a000.lvts: lvts1: read all 4 sensors in 10080 us, one in 2404 us
+mt_wdt 1001c000.watchdog: SoC power status: software reset
+mt_wdt 1001c000.watchdog: requested IRQ#17
+mt_wdt 1001c000.watchdog: activated with 30 second delay
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (63488 buckets, 126976 max)
+ctnetlink v0.93: registering with nfnetlink.
+Fast NAT loaded
+ip_set: protocol 6
+ipip: IPv4 and MPLS over IPv4 tunneling driver
+gre: GRE over IPv4 demultiplexor driver
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 17
+ubridge: Tiny bridge driver, 1.2
+8021q: 802.1Q VLAN Support v1.8
+proc: disabling
+VFS: Mounted root (squashfs filesystem) readonly on device 31:6.
+Freeing unused kernel memory: 320K
+fuse init (API version 7.26)
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+tsmb: loading out-of-tree module taints kernel.
+tsmb: module license 'Proprietary' taints kernel.
+Disabling lock debugging due to kernel taint
+Loading TSMB module version 3020.9.24.23.
+Built against headers 4.9-ndm-5 #0 SMP Mon Dec 22 11:19:36 2025 aarch64
+Running on kernel 4.9-ndm-5 #0 SMP Tue Jul 21 17:23:11 2026 aarch64
+TSMB module version 3020.9.24.23 loaded.
+io scheduler deadline registered
+SCSI subsystem initialized
+loop: module loaded
+ip_gre: GRE over IPv4 tunneling driver
+Searching for suitable storage partitions...
+Found 1st storage partition of size 58720256 bytes
+Found 2nd storage partition of size 59244544 bytes
+Registering UBI data partitions parser
+Concatenating MTD devices:
+(0): "Storage_A"
+(1): "Storage_B"
+into device "NDM combined UBI partition"
+1 ndmubipart partitions found on MTD device NDM combined UBI partition
+mtd: creating 1 MTD partitions on "NDM combined UBI partition":
+0x000000000000-0x000007080000 : "Storage"
+Merging storage partitions OK
+nf_conntrack_rtsp v0.7 loading
+phr: NDM I/O Peripheral Driver, v2.6.60
+phr: "NC-1812" profile driver loaded
+nat46: module (version 1.0.6) loaded.
+io scheduler cfq registered
+mtdoops_proc: Attached to MTD device 9
+resetnds: Module loaded.
+IPsec XFRM device driver
+wireguard: WireGuard 1.0.20200623 loaded. See www.wireguard.com for information.
+wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbcore: registered new interface driver usbserial
+l2tp_core: L2TP core driver, V2.0
+usbcore: registered new interface driver cdc_wdm
+jffs2: version 2.2. (NAND) (c) 2001-2006 Red Hat, Inc.
+NET: Registered protocol family 15
+Tuxera NTFS driver 3022.5.18.12 [Flags: R/W MODULE].
+Built against headers 4.9-ndm-5 #0 SMP Mon Dec 22 11:19:36 2025 aarch64
+Running on kernel 4.9-ndm-5 #0 SMP Tue Jul 21 17:23:11 2026 aarch64
+Initializing XFRM netlink socket
+Tuxera FAT 12/16/32 driver version 3021.3.22.31 [Flags: R/W MODULE].
+Built against headers 4.9-ndm-5 #0 SMP Mon Dec 22 11:19:36 2025 aarch64
+Running on kernel 4.9-ndm-5 #0 SMP Tue Jul 21 17:23:11 2026 aarch64
+usbcore: registered new interface driver sierra
+usbserial: USB Serial support registered for Sierra USB modem
+usbcore: registered new interface driver usblp
+l2tp_ppp: PPPoL2TP kernel driver, V2.0
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+nf_nat_rtsp v0.7 loading
+Tuxera HFS+ driver 3021.12.17
+Built against headers 4.9-ndm-5 #0 SMP Mon Dec 22 11:19:36 2025 aarch64
+Running on kernel 4.9-ndm-5 #0 SMP Tue Jul 21 17:23:11 2026 aarch64
+exFAT: file-system version 5.9-6ndm
+usbextras: loaded
+usbcore: registered new interface driver cdc_ncm
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver qmi_wwan
+usbcore: registered new interface driver huawei_cdc_ncm
+usbcore: registered new interface driver uas
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver qcserial
+usbserial: USB Serial support registered for Qualcomm USB modem
+usbcore: registered new interface driver rndis_host
+IPv6: ADDRCONF(NETDEV_UP): ezcfg0: link is not ready
+nacct: init, v 3.9
+mt7988_eth: NDM Ethernet Switch Driver for MediaTek MT7988, v1.0.62
+mt7988_eth: MT7988 SoC, TX/RSS descriptors: 4096/4096, LRO descriptors: 256
+mt7988_eth: eth2 created for GMAC1 (d4:9c:53:20:fd:f3 address, 4 EPHY ports)
+mt7988_eth: eth3 created for GMAC2 (d4:9c:53:20:fd:f4 address, 1 EPHY port)
+mt7988_eth: eth4 created for GMAC3 (d4:9c:53:20:fd:f5 address, 1 EPHY port)
+mt7988_eth: embedded switch
+mt7988_eth: GE-0 PHY analog calibration
+mt7988_eth: GE-1 PHY analog calibration
+mt7988_eth: GE-2 PHY analog calibration
+mt7988_eth: GE-3 PHY analog calibration
+mt7988_eth: MT7988 MD32 fw date code: 2024/10/30, version: 10.0.0
+mt7988_eth: RTL8261BE PHY detected on MDIO addr 0x1b
+mt7988_eth: NC-1812 profile loaded
+IPv6: ADDRCONF(NETDEV_UP): eth2: link is not ready
+IPv6: ADDRCONF(NETDEV_CHANGE): eth2: link becomes ready
+mt7992 0000:01:00.0: enabling device (0000 -> 0002)
+mt7992 0000:01:00.0: Using 36bit DMA for streaming map
+mt7992 0000:01:00.0: Using 32bit DMA for coherent map
+MT7993 AP Driver version: 8.3.1.3-23-5
+MT7993 AP Driver version: 8.3.1.3-23-5
+warp: WO CPU0 firmware built date: 20240523183007
+warp_dev0 device for mt7992 started on IRQ7
+mt7992 0000:01:00.0: WM patch info: Build time: 20260107161321a
+mt7992 0000:01:00.0: WM firmware info: Build time: 20260107160729, FW mode: 0
+mt7992 0000:01:00.0: DSP firmware info: Build time: 20260107160604
+mt7992 0000:01:00.0: WA firmware info: Build time: 20260107160633
+SKU: #5.MT7992-BE7200-7975-7977
+SKU: #5.MT7992-BE7200-7975-7977
+SKU: #5.MT7992-BE7200-7975-7977
+SKU: #5.MT7992-BE7200-7975-7977
+ubi: BMT NAND mode detected, BEB reservation disabled
+ubi0: attaching mtd18
+ubi0: scanning is finished
+ubi0: attached mtd18 (name "Storage", size 112 MiB)
+ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+ubi0: good PEBs: 900, bad PEBs: 0, corrupted PEBs: 0
+ubi0: user volume: 1, internal volumes: 1, max. volumes count: 128
+ubi0: max/mean erase counter: 2/1, WL threshold: 2048, image sequence number: 3239268645
+ubi0: available PEBs: 0, total reserved PEBs: 900, PEBs reserved for bad PEB handling: 1
+ubi0: background thread "ubi_bgt0d" started, PID 787
+UBIFS (ubi0:0): background thread "ubifs_bgt0_0" started, PID 788
+UBIFS (ubi0:0): recovery needed
+UBIFS (ubi0:0): recovery completed
+UBIFS (ubi0:0): UBIFS: mounted UBI device 0, volume 0, name "storage"
+UBIFS (ubi0:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+UBIFS (ubi0:0): FS size: 112246784 bytes (107 MiB, 884 LEBs), journal size 5586944 bytes (5 MiB, 44 LEBs)
+UBIFS (ubi0:0): reserved for root: 4952683 bytes (4836 KiB)
+UBIFS (ubi0:0): media format: w4/r0 (latest is w4/r0), UUID E365094E-74F0-4CE1-AE66-C3A1FAF47864, small LPT model
+ntc: NDM Traffic Control Module, v9.0.13
+IPv6: ADDRCONF(NETDEV_UP): eth3: link is not ready
+8021q: adding VLAN 0 to HW filter on device eth3
+IPv6: ADDRCONF(NETDEV_UP): rai0: link is not ready
+IPv6: ADDRCONF(NETDEV_CHANGE): rai0: link becomes ready
+IPv6: ADDRCONF(NETDEV_UP): eth4: link is not ready
+br0: port 1(eth2.1) entered blocking state
+br0: port 1(eth2.1) entered disabled state
+device eth2.1 entered promiscuous mode
+device eth2 entered promiscuous mode
+br0: port 1(eth2.1) entered blocking state
+br0: port 1(eth2.1) entered forwarding state
+br0: disabled STP choke for port 1(eth2.1)
+br0: port 2(eth4) entered blocking state
+br0: port 2(eth4) entered disabled state
+device eth4 entered promiscuous mode
+br0: disabled STP choke for port 2(eth4)
+br0: port 3(ra0) entered blocking state
+br0: port 3(ra0) entered disabled state
+device ra0 entered promiscuous mode
+br0: disabled STP choke for port 3(ra0)
+br0: port 4(rai0) entered blocking state
+br0: port 4(rai0) entered disabled state
+device rai0 entered promiscuous mode
+br0: port 4(rai0) entered blocking state
+br0: port 4(rai0) entered forwarding state
+br0: disabled STP choke for port 4(rai0)
+br0: port 5(ra1) entered blocking state
+br0: port 5(ra1) entered disabled state
+device ra1 entered promiscuous mode
+br0: port 5(ra1) entered blocking state
+br0: port 5(ra1) entered forwarding state
+br0: disabled STP choke for port 5(ra1)
+br0: port 1(eth2.1) entered disabled state
+br0: port 1(eth2.1) entered blocking state
+br0: port 1(eth2.1) entered forwarding state
+br0: port 5(ra1) entered disabled state
+br0: port 4(rai0) entered disabled state
+br0: port 1(eth2.1) entered disabled state
+br0: port 5(ra1) entered blocking state
+br0: port 5(ra1) entered forwarding state
+br0: port 4(rai0) entered blocking state
+br0: port 4(rai0) entered forwarding state
+br0: port 1(eth2.1) entered blocking state
+br0: port 1(eth2.1) entered forwarding state
+br0: port 6(ra7.1) entered blocking state
+br0: port 6(ra7.1) entered disabled state
+device ra7.1 entered promiscuous mode
+device ra7 entered promiscuous mode
+br0: port 6(ra7.1) entered blocking state
+br0: port 6(ra7.1) entered forwarding state
+br0: port 7(rai7.1) entered blocking state
+br0: port 7(rai7.1) entered disabled state
+device rai7.1 entered promiscuous mode
+device rai7 entered promiscuous mode
+br0: port 7(rai7.1) entered blocking state
+br0: port 7(rai7.1) entered forwarding state
+IPv6: ADDRCONF(NETDEV_CHANGE): eth3: link becomes ready
+br0: port 4(rai0) entered disabled state
+IPv6: ADDRCONF(NETDEV_UP): rai0: link is not ready
+IPv6: ADDRCONF(NETDEV_CHANGE): rai0: link becomes ready
+br0: port 4(rai0) entered blocking state
+br0: port 4(rai0) entered forwarding state
+br0: port 5(ra1) entered disabled state
+IPv6: ADDRCONF(NETDEV_UP): ra1: link is not ready
+xhci-mtk 11200000.xhci: xHCI Host Controller
+xhci-mtk 11200000.xhci: new USB bus registered, assigned bus number 1
+IPv6: ADDRCONF(NETDEV_CHANGE): ra1: link becomes ready
+br0: port 5(ra1) entered blocking state
+br0: port 5(ra1) entered forwarding state
+xhci-mtk 11200000.xhci: hcc params 0x01403f99 hci version 0x110 quirks 0x00210010
+xhci-mtk 11200000.xhci: irq 120, io mem 0x11200000
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.09
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: xHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9-ndm-5 xhci-hcd
+usb usb1: SerialNumber: 11200000.xhci
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+xhci-mtk 11200000.xhci: xHCI Host Controller
+xhci-mtk 11200000.xhci: new USB bus registered, assigned bus number 2
+xhci-mtk 11200000.xhci: Host supports USB 3.2 Enhanced SuperSpeed
+usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 4.09
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: xHCI Host Controller
+usb usb2: Manufacturer: Linux 4.9-ndm-5 xhci-hcd
+usb usb2: SerialNumber: 11200000.xhci
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+Disable SMB fastpath
+Enable SMB fastpath for 192.168.1.1/255.255.255.0
+igmpsn: NDM IGMP Switch Snooping Module, v4.3.5
+usb 1-1: new high-speed USB device number 2 using xhci-mtk
+usb 1-1: New USB device found, idVendor=05e3, idProduct=0608, bcdDevice=60.70
+usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+usb 1-1: Product: USB2.0 Hub
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 2 ports detected
+usb 2-1: new SuperSpeed Gen 1x2 USB device number 2 using xhci-mtk
+usb 2-1: New USB device found, idVendor=0781, idProduct=5581, bcdDevice= 1.00
+usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 2-1: Product:  SanDisk 3.2Gen1
+usb 2-1: Manufacturer:  USB
+usb 2-1: SerialNumber: 0401639a0d5fa670ff54178b3ba4d26838583f289a857f359ea95876482501cd0af0000000000000000000006aaa16cfff0682188155810780ab172d
+usb-storage 2-1:1.0: USB Mass Storage device detected
+usb-storage 2-1:1.0: Quirks match for vid 0781 pid 5581: 800000
+scsi host0: usb-storage 2-1:1.0
+hw_nat: MediaTek HW NAT module v5.0.7.0-23 loaded, FoE size: 32768, AG pairs: 7
+fastvpn: sizeof(bind) = 304
+fastvpn: sizeof(hashent) = 128
+fastvpn: registered
+fastvpn: enabled
+fastvpn: Fast VPN init, v7.0-4
+fastvpn: PPPoE/IPoE LAN software acceleration is disabled
+scsi 0:0:0:0: Direct-Access      USB      SanDisk 3.2Gen1 1.00 PQ: 0 ANSI: 6
+sd 0:0:0:0: Attached scsi generic sg0 type 0
+sd 0:0:0:0: [sda] 60088320 512-byte logical blocks: (30.8 GB/28.7 GiB)
+sd 0:0:0:0: [sda] Write Protect is off
+sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+ sda: sda1 sda2
+sd 0:0:0:0: [sda] Attached SCSI removable disk
+Adding 938876k swap on /dev/sda1.  Priority:-1 extents:1 across:938876k 
+br0: port 5(ra1) entered disabled state
+TSMB module version 3020.9.24.23 started from process 839!
+EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+SKU: #5.MT7992-BE7200-7975-7977
+IPv6: ADDRCONF(NETDEV_UP): ra1: link is not ready
+EXT4-fs (sda2): re-mounted. Opts: data=ordered
+capability: warning: `nginx' uses 32-bit capabilities (legacy support in use)
+capability: warning: `nginx' uses 32-bit capabilities (legacy support in use)
+br0: port 4(rai0) entered disabled state
+SKU: #5.MT7992-BE7200-7975-7977
+br0: port 4(rai0) entered blocking state
+br0: port 4(rai0) entered forwarding state
+IPv6: ADDRCONF(NETDEV_CHANGE): ra1: link becomes ready
+br0: port 5(ra1) entered blocking state
+br0: port 5(ra1) entered forwarding state
+ACS result: Primary Channel 44, Min Channel Busy = 0, BW = 160
+ACS result: Primary Channel 4, Min Channel Busy = 1070, BW = 20
+process 'dropbear' launched '/usr/libexec/sftp-server' with NULL argv: empty string added
+EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (sda2): re-mounted. Opts: data=ordered
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 4, Min Channel Busy = 409, BW = 20
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 4, Min Channel Busy = 519, BW = 20
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 4, Min Channel Busy = 956, BW = 20
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 9, Min Channel Busy = 1628, BW = 20
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 4, Min Channel Busy = 617, BW = 20
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 4, Min Channel Busy = 1199, BW = 20
+AP 5GHz: run channel auto-switch
+ACS result: Primary Channel 48, Min Channel Busy = 0, BW = 160
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 8, Min Channel Busy = 1990, BW = 20
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 4, Min Channel Busy = 1071, BW = 20
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 9, Min Channel Busy = 1166, BW = 20
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 8, Min Channel Busy = 0, BW = 20
+AP 2.4GHz: run channel auto-switch
+ACS result: Primary Channel 9, Min Channel Busy = 1942, BW = 20
+
+
+============================================================
+=== dmseg_boot
+============================================================
+Booting Linux on physical CPU 0x0
+Boot CPU: AArch64 Processor [411fd090]
+bootconsole [uart8250] enabled
+CPU features: enabling workaround for ARM erratum 858921
+arm_arch_timer: Enabling local workaround for ARM erratum 858921
+arm_arch_timer: Architected cp15 timer(s) running at 13.00MHz (phys).
+CPU1: Booted secondary processor [411fd090]
+CPU2: Booted secondary processor [411fd090]
+bootconsole [uart8250] disabled
+mtk_rng rng-arm-smccc: registered RNG driver
+0x000000080000-0x000000280000 : "U-Boot"
+mt7988_eth: NDM Ethernet Switch Driver for MediaTek MT7988, v1.0.62
+mt7988_eth: MT7988 SoC, TX/RSS descriptors: 4096/4096, LRO descriptors: 256
+mt7988_eth: eth2 created for GMAC1 (d4:9c:53:20:fd:f3 address, 4 EPHY ports)
+mt7988_eth: eth3 created for GMAC2 (d4:9c:53:20:fd:f4 address, 1 EPHY port)
+mt7988_eth: eth4 created for GMAC3 (d4:9c:53:20:fd:f5 address, 1 EPHY port)
+mt7988_eth: embedded switch
+mt7988_eth: GE-0 PHY analog calibration
+mt7988_eth: GE-1 PHY analog calibration
+mt7988_eth: GE-2 PHY analog calibration
+mt7988_eth: GE-3 PHY analog calibration
+mt7988_eth: MT7988 MD32 fw date code: 2024/10/30, version: 10.0.0
+mt7988_eth: RTL8261BE PHY detected on MDIO addr 0x1b
+mt7988_eth: NC-1812 profile loaded
+hw_nat: MediaTek HW NAT module v5.0.7.0-23 loaded, FoE size: 32768, AG pairs: 7
+
+
+============================================================
+=== devicetree
+============================================================
+#address-cells
+#size-cells
+ap2woccif@151A5000
+apmixedsys@1001E000
+audio-controller@11210000
+boottrap@1001f6f0
+chosen
+compatible
+consys@10000000
+cpus
+crypto@15600000
+efuse@11f50000
+ethernet@15100000
+hnat@15000000
+hpdma@09106000
+hpdma@09606000
+hwver
+i2c@11003000
+i2c@11004000
+i2c@11005000
+infra_bus_prot@1000310c
+infracfg@10209000
+infracfg_ao@10001000
+interrupt-controller@c000000
+interrupt-parent
+lvts@1100a000
+mcusys@100E0000
+mediatek,env-offset
+mediatek,env-part
+mediatek,env-size
+memory@40000000
+mmc@11230000
+model
+name
+nmbm_spim_nand
+oscillator-40m
+pce@15100000
+pcie@11280000
+pcie@11290000
+pcie@11300000
+pcie@11310000
+phy-gmac2
+phy-gmac3
+pinctrl@1001f000
+pmu
+psci
+pwm@10048000
+regulator-3p3v
+regulator-5v
+reserved-memory
+rng-arm-smccc
+serial@11000000
+serial@11000100
+serial@11000200
+snfi@11001000
+spi@11007000
+spi@11008000
+spi@11009000
+switch0@15020000
+syscon@10060000
+syscon@10070000
+syscon@15000000
+syscon@15031000
+t-phy-usb
+thermal-zones
+timer
+timer@10008000
+topckgen@1001B000
+topmisc@11d10000
+tops-mbox
+tops-ocd@0e500000
+tops@09100000
+usxgmiisys@10080000
+usxgmiisys@10081000
+watchdog@1001c000
+wdma@15104800
+wed2@15012000
+wed3@15014000
+wed@15010000
+wed_pcie@10003000
+wocpu0_ilm@151E0000
+wocpu1_ilm@152E0000
+wocpu2_ilm@153E0000
+wocpu_boot@15194000
+wocpu_dlm@151E8000
+xfi_pextp@11f20000
+xfi_pextp@11f30000
+xfi_pll@11f40000
+xhci@11190000
+xhci@11200000
+xs-phy-usb
+netcraze,nc-1012 mediatek,mt7988d mediatek,mt7988 Netcraze NC-1812 
+
+============================================================
+=== dt_model
+============================================================
+sh: syntax error: unexpected redirection
+
+
+============================================================
+=== flash_info
+============================================================
+/dev/root / squashfs ro,relatime 0 0
+tmpfs /dev tmpfs rw,nosuid,noexec,relatime 0 0
+none /dev/pts devpts rw,nosuid,noexec,relatime,mode=600,ptmxmode=000 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /tmp tmpfs rw,nosuid,nodev,relatime 0 0
+none /sys/kernel/debug debugfs rw,nosuid,noexec,relatime 0 0
+/dev/ubi0_0 /storage ubifs rw,nosuid,nodev,noexec,relatime,compr=zlib 0 0
+/dev/sda2 /tmp/mnt/bc5d6fc1-1c19-4a00-a83f-d2c2e72a7ad5 ext4 rw,noatime,data=ordered 0 0
+/dev/sda2 /opt ext4 rw,noatime,data=ordered 0 0
+
+
+============================================================
+=== mount
+============================================================
+/dev/root on / type squashfs (ro,relatime)
+tmpfs on /dev type tmpfs (rw,nosuid,noexec,relatime)
+none on /dev/pts type devpts (rw,nosuid,noexec,relatime,mode=600,ptmxmode=000)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /tmp type tmpfs (rw,nosuid,nodev,relatime)
+none on /sys/kernel/debug type debugfs (rw,nosuid,noexec,relatime)
+/dev/ubi0_0 on /storage type ubifs (rw,nosuid,nodev,noexec,relatime,compr=zlib)
+/dev/sda2 on /tmp/mnt/bc5d6fc1-1c19-4a00-a83f-d2c2e72a7ad5 type ext4 (rw,noatime,data=ordered)
+/dev/sda2 on /opt type ext4 (rw,noatime,data=ordered)
+
+
+============================================================
+=== df
+============================================================
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root                21.1M     21.1M         0 100% /
+tmpfs                   495.6M         0    495.6M   0% /dev
+tmpfs                   495.6M    260.0K    495.4M   0% /tmp
+/dev/ubi0_0              98.2M     24.0K     93.5M   0% /storage
+/dev/sda2                27.1G     36.7M     27.1G   0% /tmp/mnt/bc5d6fc1-1c19-4a00-a83f-d2c2e72a7ad5
+/dev/sda2                27.1G     36.7M     27.1G   0% /opt
+
+
+============================================================
+=== firmware_version
+============================================================
+
+
+============================================================
+=== opkg
+============================================================
+busybox - 1.37.0-6
+ca-bundle - 20250419-2
+ca-certificates - 20250419-2
+dropbear - 2025.89-1
+entware-release - 2025.05-1
+findutils - 4.10.0-1
+grep - 3.12-1
+iptables - 1.4.21-6
+ldconfig - 2.27-12
+libc - 2.27-12
+libcurl - 8.15.0-2
+libgcc - 8.4.0-12
+libgmp - 6.3.0-2
+libiconv-full - 1.18-1
+libnettle - 3.10.2-1
+libnghttp2 - 1.66.0-1
+libopenssl - 3.5.5-1
+libpcre2 - 10.47-1
+libpthread - 2.27-12
+librt - 2.27-12
+libssp - 8.4.0-12
+libstdcpp - 8.4.0-12
+libxml2 - 2.15.1-1
+lighttpd - 1.4.82-2
+lighttpd-mod-cgi - 1.4.82-2
+lighttpd-mod-redirect - 1.4.82-2
+lighttpd-mod-rewrite - 1.4.82-2
+lighttpd-mod-setenv - 1.4.82-2
+locales - 2.27-9
+nfqws-keenetic-web - 3.0.23
+nfqws2-keenetic - 1.2.4
+opkg - 2025.11.05~80503d94-1
+opt-ndmsv2 - 1.0-17
+php8 - 8.4.16-4
+php8-cgi - 8.4.16-4
+php8-mod-curl - 8.4.16-4
+php8-mod-session - 8.4.16-4
+poorbox - 1.37.0-2
+terminfo - 6.4-3
+wget-ssl - 1.25.0-4
+zlib - 1.3.1-1
+zoneinfo-asia - 2025c-1
+zoneinfo-core - 2025c-1
+zoneinfo-europe - 2025c-1
+
+
+============================================================
+=== ndms_version
+============================================================
+
+
+============================================================
+=== ps
+============================================================
+  PID USER       VSZ STAT COMMAND
+    1 root      1080 S    init
+    2 root         0 SW   [kthreadd]
+    4 root         0 SW<  [kworker/0:0H]
+    6 root         0 SW   [ksoftirqd/0]
+    7 root         0 SW   [rcu_sched]
+    8 root         0 SW   [rcu_bh]
+    9 root         0 SW   [migration/0]
+   10 root         0 SW<  [lru-add-drain]
+   11 root         0 SW   [cpuhp/0]
+   12 root         0 SW   [cpuhp/1]
+   13 root         0 SW   [migration/1]
+   14 root         0 SW   [ksoftirqd/1]
+   16 root         0 SW<  [kworker/1:0H]
+   17 root         0 SW   [cpuhp/2]
+   18 root         0 SW   [migration/2]
+   19 root         0 SW   [ksoftirqd/2]
+   21 root         0 SW<  [kworker/2:0H]
+  160 root         0 SW   [oom_reaper]
+  161 root         0 SW<  [writeback]
+  163 root         0 SW<  [crypto]
+  164 root         0 SW<  [bioset]
+  166 root         0 SW<  [kblockd]
+  239 root         0 SW   [kswapd0]
+  240 root         0 SW<  [vmstat]
+  334 root         0 SW   [hwrng]
+  335 root         0 SW   [kworker/2:1]
+  338 root         0 SW   [spi32766]
+  345 root         0 SW<  [bioset]
+  351 root         0 SW<  [bioset]
+  356 root         0 SW<  [bioset]
+  361 root         0 SW<  [bioset]
+  366 root         0 SW<  [bioset]
+  371 root         0 SW<  [bioset]
+  376 root         0 SW<  [bioset]
+  381 root         0 SW<  [bioset]
+  386 root         0 SW<  [bioset]
+  391 root         0 SW<  [bioset]
+  396 root         0 SW<  [bioset]
+  401 root         0 SW<  [bioset]
+  406 root         0 SW<  [bioset]
+  411 root         0 SW<  [bioset]
+  416 root         0 SW<  [bioset]
+  417 root         0 SW   [kworker/0:1]
+  422 root         0 SW<  [bioset]
+  427 root         0 SW<  [bioset]
+  432 root         0 SW<  [bioset]
+  467 root         0 SW<  [ipv6_addrconf]
+  476 root         0 SW<  [kworker/0:1H]
+  477 root         0 SW<  [kworker/1:1H]
+  478 root         0 SW<  [kworker/2:1H]
+  479 root     66516 S    ndm
+  482 root         0 SW   [kworker/0:2]
+  530 root         0 SW<  [bioset]
+  533 root         0 SW<  [bioset]
+  536 root         0 SW<  [bioset]
+  539 root         0 SW<  [bioset]
+  542 root         0 SW<  [bioset]
+  545 root         0 SW<  [bioset]
+  548 root         0 SW<  [bioset]
+  551 root         0 SW<  [bioset]
+  576 root         0 SW<  [bioset]
+  600 root         0 SW   [kworker/u6:3]
+  660 root         0 SW<  [bioset]
+  710 root         0 SW<  [uas]
+  742 root         0 SW   [irq/111-mt7988-]
+  743 root         0 SW   [irq/121-mt7988-]
+  744 root         0 SW   [irq/29-mt7988-p]
+  745 root         0 SW   [irq/118-eth_mis]
+  752 root         0 SW   [ser_mngr]
+  753 root         0 SW   [warp]
+  754 root         0 SW   [wed_task0]
+  775 root         0 SW   [HwCtrlTask_0]
+  776 root         0 SW   [DeviceTask_0]
+  777 root         0 SW<  [ph_dev_wq_0]
+  787 root         0 SW   [ubi_bgt0d]
+  788 root         0 SW   [ubifs_bgt0_0]
+  793 root      5292 S    /bin/wind -b br0 -i rai0 -i ra1 -k *****************
+  798 root      1936 S    /usr/sbin/ndnproxy -c /var/ndnproxymain.conf -p /var
+  805 root      1376 S    /usr/sbin/telnetd -l ndmc -p 23 -c /var/telnetd.conf
+  806 root      5276 S    /usr/sbin/dropbear                                  
+  807 root      1140 S    /bin/bndstrg -d 0 -c /var/run/bndstrg-br0.conf
+  809 nobody    1192 S    /usr/sbin/deadwood -f /var/deadwood-1.conf
+  817 root         0 SW   [scsi_eh_0]
+  818 root         0 SW<  [scsi_tmf_0]
+  819 root         0 SW   [usb-storage]
+  820 root      1460 S    /sbin/ndhcpc -f -n GigabitEthernet1 -i eth3 -s /var/
+  821 root      1164 S    /usr/sbin/radvd -n -m syslog -C /var/run/radvd.conf
+  822 root      1160 S    /usr/sbin/radvd -n -m syslog -C /var/run/radvd.conf
+  823 root         0 SW<  [bioset]
+  827 root      1484 S    /sbin/ndhcps -f -s -i br0 -I Bridge0 -m 192.168.1.1
+  830 nobody    1684 S    /usr/sbin/avahi-daemon -s --no-proc-title
+  831 root     12140 S    /sbin/tsmb-server -c /var/run/tsmb/tsmb.conf
+  835 root      2860 S    /usr/sbin/dhcpd -f -6 -cf /var/run/dhcp6d.conf-br0 -
+  840 root         0 SW   [tsmb_core]
+  841 root         0 SW   [smbd/transp_rx_]
+  842 root         0 SW   [send_wait_queue]
+  843 root         0 SW   [smbd/transp_rx_]
+  844 root         0 SW   [timer_smb2_serv]
+  845 root         0 SW   [smb-crypt]
+  846 root         0 SW   [open_db_thread]
+  847 root         0 SW   [timer_open_db]
+  852 root         0 SW   [RtmpCmdQTask_00]
+  853 root         0 SW   [RtmpWscTask_00]
+  854 root         0 SW   [BPCCCmdQTask_00]
+  855 root         0 SW   [ser_task_00]
+  858 root         0 SW   [RtmpMlmeTask_00]
+  868 root     12348 S    nginx: master process /usr/sbin/nginx -e /dev/null
+  875 root         0 SW   [RtmpCmdQTask_01]
+  876 root         0 SW   [RtmpWscTask_01]
+  877 root         0 SW   [BPCCCmdQTask_01]
+  878 root         0 SW   [ser_task_01]
+  879 root         0 SW   [RtmpMlmeTask_01]
+  883 root      6540 S    /bin/coalagent -c c18d4106-15ca-11f1-9396-bd04cd2e7b
+  895 root      1384 S    /usr/sbin/nimproxy -e eth3 -i br0 -j /var/run/igmp-j
+  896 root      1520 S    /usr/sbin/miniupnpd -a Bridge0 br0 -i GigabitEtherne
+  911 root         0 SW   [audit]
+  912 root         0 SW   [smbd/transp_rx_]
+  913 root         0 SW   [tsmb_transport0]
+  914 root         0 SW   [vfs-ctrl-000000]
+  915 root         0 SW   [vfs-io-00000000]
+ 1024 nobody   12888 S    nginx: worker process
+ 1025 nobody   12888 S    nginx: worker process
+ 1026 nobody   12888 S    nginx: worker process
+ 1032 nobody    1368 S    /usr/sbin/nllda -I Bridge0 -p Home -M d4:9c:53:20:fd
+ 1033 nobody    1368 S    /usr/sbin/nlldo -u nobody -a 32
+ 1056 nobody    6780 S    /usr/sbin/stubby -C /tmp/run/dotproxy-0-0.yml -v 6 -
+ 1057 nobody    6892 S    /usr/sbin/stubby -C /tmp/run/dotproxy-0-1.yml -v 6 -
+ 1058 nobody    7732 S    /usr/sbin/https_dns_proxy -a 127.0.0.1 -u nobody -g
+ 1059 nobody    8416 S    /usr/sbin/https_dns_proxy -a 127.0.0.1 -u nobody -g
+ 1394 root         0 SW   [jbd2/sda2-8]
+ 1395 root         0 SW<  [ext4-rsv-conver]
+ 2760 root      2616 S    /opt/sbin/dropbear -p 222 -P /opt/var/run/dropbear.p
+ 3400 nobody    7584 S    /opt/usr/bin/nfqws2 --daemon --pidfile=/opt/var/run/
+ 3924 root      4496 S    /opt/sbin/lighttpd -f /opt/etc/lighttpd/lighttpd.con
+11235 root         0 SW   [kworker/2:0]
+16099 root         0 SW   [kworker/u6:0]
+16114 root         0 SW   [kworker/1:2]
+16265 root         0 SW   [kworker/1:0]
+16398 root         0 SW   [kworker/1:1]
+16465 root      2756 S    /opt/sbin/dropbear -p 222 -P /opt/var/run/dropbear.p
+16531 root      3372 S    sh -c ps 2>/dev/null || ps -ef 2>/dev/null || echo '
+16532 root      3372 R    ps
+
+
+============================================================
+=== switch
+============================================================
+no swconfig
+
+
+============================================================
+=== i2c
+============================================================
+drwxr-xr-x    2 root     root             0 Jul 26 09:00 .
+drwxr-xr-x    4 root     root             0 Jul 26 09:00 ..
+lrwxrwxrwx    1 root     root             0 Jul 26 09:00 0-0064 -> ../../../devices/platform/11003000.i2c/i2c-0/0-0064
+lrwxrwxrwx    1 root     root             0 Jul 26 09:00 i2c-0 -> ../../../devices/platform/11003000.i2c/i2c-0
+
+
+============================================================
+=== pwm
+============================================================
+no pwm
+
+
+============================================================
+=== serial
+============================================================
+/dev/ttyS0, UART: 16650V2, Port: 0x0000, IRQ: 18
+/dev/tty             /dev/tty        5       0 system:/dev/tty
+/dev/console         /dev/console    5       1 system:console
+/dev/ptmx            /dev/ptmx       5       2 system
+acm                  /dev/ttyACM   166 0-255 serial
+usbserial            /dev/ttyUSB   188 0-511 serial
+serial               /dev/ttyS       4      64 serial
+pty_slave            /dev/pts      136 0-1048575 pty:slave
+pty_master           /dev/ptm      128 0-1048575 pty:master
+
+
+============================================================
+=== thermal
+============================================================
+68197
+65299
+65374
+66285
+67472
+64662
+64599
+66498
+68197
+drwxr-xr-x    2 root     root             0 Jul 25 21:23 .
+drwxr-xr-x   23 root     root             0 Jan  1  1970 ..
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 thermal_zone0 -> ../../devices/virtual/thermal/thermal_zone0
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 thermal_zone1 -> ../../devices/virtual/thermal/thermal_zone1
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 thermal_zone2 -> ../../devices/virtual/thermal/thermal_zone2
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 thermal_zone3 -> ../../devices/virtual/thermal/thermal_zone3
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 thermal_zone4 -> ../../devices/virtual/thermal/thermal_zone4
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 thermal_zone5 -> ../../devices/virtual/thermal/thermal_zone5
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 thermal_zone6 -> ../../devices/virtual/thermal/thermal_zone6
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 thermal_zone7 -> ../../devices/virtual/thermal/thermal_zone7
+lrwxrwxrwx    1 root     root             0 Jul 25 21:23 thermal_zone8 -> ../../devices/virtual/thermal/thermal_zone8
+
+
+============================================================
+=== mac
+============================================================
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+    link/ether 46:3e:83:e1:91:65 brd ff:ff:ff:ff:ff:ff
+    link/ether d4:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d4:9c:53:20:fd:f4 brd ff:ff:ff:ff:ff:ff
+    link/ether d4:9c:53:20:fd:f5 brd ff:ff:ff:ff:ff:ff
+    link/ether d4:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d4:9c:53:20:fd:f6 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:10:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:00:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:30:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:40:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:50:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:60:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:70:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d2:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:10:fd:f6 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:00:fd:f6 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:30:fd:f6 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:40:fd:f6 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:50:fd:f6 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:60:fd:f6 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:70:fd:f6 brd ff:ff:ff:ff:ff:ff
+    link/ether d2:9c:53:20:fd:f6 brd ff:ff:ff:ff:ff:ff
+    link/ether d4:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d4:9c:53:20:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:70:fd:f3 brd ff:ff:ff:ff:ff:ff
+    link/ether d6:9c:53:70:fd:f6 brd ff:ff:ff:ff:ff:ff
+br0       Link encap:Ethernet  HWaddr D4:9C:53:20:FD:F3  
+eth2      Link encap:Ethernet  HWaddr D4:9C:53:20:FD:F3  
+eth2.1    Link encap:Ethernet  HWaddr D4:9C:53:20:FD:F3  
+eth3      Link encap:Ethernet  HWaddr D4:9C:53:20:FD:F4  
+eth4      Link encap:Ethernet  HWaddr D4:9C:53:20:FD:F5  
+ezcfg0    Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+ra1       Link encap:Ethernet  HWaddr D6:9C:53:10:FD:F3  
+ra7       Link encap:Ethernet  HWaddr D6:9C:53:70:FD:F3  
+ra7.1     Link encap:Ethernet  HWaddr D6:9C:53:70:FD:F3  
+rai0      Link encap:Ethernet  HWaddr D4:9C:53:20:FD:F6  
+rai7      Link encap:Ethernet  HWaddr D6:9C:53:70:FD:F6  
+rai7.1    Link encap:Ethernet  HWaddr D6:9C:53:70:FD:F6  
+d2:9c:53:20:fd:f3
+d2:9c:53:20:fd:f6
+d4:9c:53:20:fd:f3
+46:3e:83:e1:91:65
+d4:9c:53:20:fd:f3
+d4:9c:53:20:fd:f3
+d4:9c:53:20:fd:f4
+d4:9c:53:20:fd:f5
+00:00:00:00:00:00
+
+00:00:00:00
+00:00:00:00:00:00
+00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+00:00:00:00:00:00
+d4:9c:53:20:fd:f3
+d6:9c:53:10:fd:f3
+d6:9c:53:00:fd:f3
+d6:9c:53:30:fd:f3
+d6:9c:53:40:fd:f3
+d6:9c:53:50:fd:f3
+d6:9c:53:60:fd:f3
+d6:9c:53:70:fd:f3
+d6:9c:53:70:fd:f3
+d4:9c:53:20:fd:f6
+d6:9c:53:10:fd:f6
+d6:9c:53:00:fd:f6
+d6:9c:53:30:fd:f6
+d6:9c:53:40:fd:f6
+d6:9c:53:50:fd:f6
+d6:9c:53:60:fd:f6
+d6:9c:53:70:fd:f6
+d6:9c:53:70:fd:f6
+00:00:00:00
+00:00:00:00
+0
+0
+3
+1
+3
+3
+3
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+0
+
