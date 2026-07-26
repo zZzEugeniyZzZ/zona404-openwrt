@@ -35,16 +35,25 @@ jobs:
 
       - name: Apply FM25G02B Quad I/O read dummy fix (PR #24007)
         run: |
-          cd openwrt
-          KERNEL_DIR=$(ls -d target/linux/generic/pending-* 2>/dev/null | head -1)
+          set -x
+          cd "$GITHUB_WORKSPACE/openwrt"
+          echo "=== Current dir: $(pwd) ==="
+          echo "=== Contents of target/linux/generic/ ==="
+          ls -la target/linux/generic/ 2>/dev/null || echo "Directory not found"
+          echo "=== Looking for pending directories ==="
+          find target/linux/generic -maxdepth 1 -type d -name 'pending-*' 2>/dev/null
+          KERNEL_DIR=$(find target/linux/generic -maxdepth 1 -type d -name 'pending-*' 2>/dev/null | head -1)
           if [ -z "$KERNEL_DIR" ]; then
             echo "ERROR: No target/linux/generic/pending-* directory found!"
             exit 1
           fi
           echo "Using kernel directory: $KERNEL_DIR"
-          cp "$GITHUB_WORKSPACE/patches/403-mtd-spinand-fmsh-fix-FM25G01B-FM25G02B-quad-io-read-dummy.patch" \
-             "$KERNEL_DIR/"
-          echo "Patch applied."
+          SRC="$GITHUB_WORKSPACE/patches/403-mtd-spinand-fmsh-fix-FM25G01B-FM25G02B-quad-io-read-dummy.patch"
+          echo "Source: $SRC"
+          ls -la "$SRC" || { echo "Patch file not found!"; exit 1; }
+          cp -v "$SRC" "$KERNEL_DIR/"
+          ls -la "$KERNEL_DIR/403-mtd-spinand-fmsh-fix-FM25G01B-FM25G02B-quad-io-read-dummy.patch"
+          echo "=== Patch applied successfully ==="
 
       - name: Configure
         run: |

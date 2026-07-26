@@ -34,7 +34,7 @@ cd "$OPENWRT_DIR"
 # Apply FM25G01B/FM25G02B Quad I/O read dummy fix (PR #24007)
 # This patch is NOT yet merged in main as of Jul 2026
 echo "=== Applying FM25G01B/FM25G02B Quad I/O read dummy fix (PR #24007) ==="
-KERNEL_DIR=$(ls -d target/linux/generic/pending-* 2>/dev/null | head -1)
+KERNEL_DIR=$(find target/linux/generic -maxdepth 1 -type d -name 'pending-*' 2>/dev/null | head -1)
 if [ -z "$KERNEL_DIR" ]; then
     echo "ERROR: No kernel pending directory found!"
     exit 1
