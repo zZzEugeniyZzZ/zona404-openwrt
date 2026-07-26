@@ -33,49 +33,15 @@ cd "$OPENWRT_DIR"
 
 # Apply FM25G01B/FM25G02B Quad I/O read dummy fix (PR #24007)
 # This patch is NOT yet merged in main as of Jul 2026
-PATCH_FILE="target/linux/generic/pending-6.18/403-mtd-spinand-fmsh-fix-FM25G01B-FM25G02B-quad-io-read-dummy.patch"
-if [ ! -f "$PATCH_FILE" ]; then
-    echo "=== Applying FM25G01B/FM25G02B Quad I/O read dummy fix (PR #24007) ==="
-    mkdir -p "$(dirname "$PATCH_FILE")"
-    cat > "$PATCH_FILE" << 'PATCH'
---- a/drivers/mtd/nand/spi/fmsh.c
-+++ b/drivers/mtd/nand/spi/fmsh.c
-@@ -44,6 +44,14 @@ static SPINAND_OP_VARIANTS(update_cache_
- 		SPINAND_PROG_LOAD_1S_1S_4S_OP(false, 0, NULL, 0),
- 		SPINAND_PROG_LOAD_1S_1S_1S_OP(false, 0, NULL, 0));
- 
-+static SPINAND_OP_VARIANTS(fm25g_read_cache_variants,
-+		SPINAND_PAGE_READ_FROM_CACHE_1S_4S_4S_OP(0, 1, NULL, 0, 0),
-+		SPINAND_PAGE_READ_FROM_CACHE_1S_1S_4S_OP(0, 1, NULL, 0, 0),
-+		SPINAND_PAGE_READ_FROM_CACHE_1S_2S_2S_OP(0, 1, NULL, 0, 0),
-+		SPINAND_PAGE_READ_FROM_CACHE_1S_1S_2S_OP(0, 1, NULL, 0, 0),
-+		SPINAND_PAGE_READ_FROM_CACHE_FAST_1S_1S_1S_OP(0, 1, NULL, 0, 0),
-+		SPINAND_PAGE_READ_FROM_CACHE_1S_1S_1S_OP(0, 1, NULL, 0, 0));
-+
- static int fm25g01b_ooblayout_ecc(struct mtd_info *mtd, int section,
- 				  struct mtd_oob_region *region)
- {
-@@ -192,7 +200,7 @@ static const struct spinand_info fmsh_sp
- 		     SPINAND_ID(SPINAND_READID_METHOD_OPCODE_DUMMY, 0xd1),
- 		     NAND_MEMORG(1, 2048, 128, 64, 1024, 21, 1, 1, 1),
- 		     NAND_ECCREQ(8, 528),
--		     SPINAND_INFO_OP_VARIANTS(&read_cache_variants,
-+		     SPINAND_INFO_OP_VARIANTS(&fm25g_read_cache_variants,
- 					      &write_cache_variants,
- 					      &update_cache_variants),
- 		     SPINAND_HAS_QE_BIT,
-@@ -202,7 +210,7 @@ static const struct spinand_info fmsh_sp
- 		     SPINAND_ID(SPINAND_READID_METHOD_OPCODE_DUMMY, 0xd2),
- 		     NAND_MEMORG(1, 2048, 128, 64, 2048, 41, 1, 1, 1),
- 		     NAND_ECCREQ(8, 528),
--		     SPINAND_INFO_OP_VARIANTS(&read_cache_variants,
-+		     SPINAND_INFO_OP_VARIANTS(&fm25g_read_cache_variants,
- 					      &write_cache_variants,
- 					      &update_cache_variants),
- 		     SPINAND_HAS_QE_BIT,
-PATCH
-    echo "Patch applied."
+echo "=== Applying FM25G01B/FM25G02B Quad I/O read dummy fix (PR #24007) ==="
+KERNEL_DIR=$(ls -d target/linux/generic/pending-* 2>/dev/null | head -1)
+if [ -z "$KERNEL_DIR" ]; then
+    echo "ERROR: No kernel pending directory found!"
+    exit 1
 fi
+echo "Using kernel directory: $KERNEL_DIR"
+cp "$BUILD_DIR/patches/403-mtd-spinand-fmsh-fix-FM25G01B-FM25G02B-quad-io-read-dummy.patch" \
+   "$KERNEL_DIR/"
 
 echo "=== Updating feeds ==="
 ./scripts/feeds update -a
