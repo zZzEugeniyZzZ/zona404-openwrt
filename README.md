@@ -68,7 +68,7 @@ reboot
 
 ### GitHub Actions (рекомендуется)
 
-Перейти на https://github.com/zZzEugeniyZzZ/zona404-openwrt/actions → Run workflow.
+Перейти на https://github.com/PeaceDeath-ai/zona404-openwrt/actions → Run workflow.
 
 ### Локально (Linux/WSL)
 

@@ -78,18 +78,20 @@ jobs:
           CONFIG_PACKAGE_mtd-utils=y
           CONFIG_PACKAGE_kmod-mtd-rw=n
           CONFIG_PACKAGE_nand-utils=y
-          CONFIG_PACKAGE_kmod-ipt-nfqueue=y
-          CONFIG_PACKAGE_kmod-nfnetlink-queue=y
-          CONFIG_PACKAGE_kmod-nft-compat=y
-          CONFIG_PACKAGE_kmod-ipt-core=y
-          CONFIG_PACKAGE_kmod-ip6tables=y
-          CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
-          CONFIG_PACKAGE_kmod-ipt-extra=y
-          CONFIG_PACKAGE_kmod-ipt-filter=y
-          CONFIG_PACKAGE_kmod-ipt-ipopt=y
-          CONFIG_PACKAGE_kmod-ipt-nat6=y
-          CONFIG_PACKAGE_kmod-ip6tables-extra=y
-          EOF
+           CONFIG_PACKAGE_kmod-ipt-nfqueue=y
+           CONFIG_PACKAGE_kmod-nfnetlink-queue=y
+           CONFIG_PACKAGE_kmod-nft-compat=y
+           CONFIG_PACKAGE_kmod-nft-queue=y
+           CONFIG_PACKAGE_kmod-ipt-core=y
+           CONFIG_PACKAGE_kmod-ip6tables=y
+           CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
+           CONFIG_PACKAGE_kmod-ipt-extra=y
+           CONFIG_PACKAGE_kmod-ipt-filter=y
+           CONFIG_PACKAGE_kmod-ipt-ipopt=y
+           CONFIG_PACKAGE_kmod-ipt-nat6=y
+           CONFIG_PACKAGE_kmod-ip6tables-extra=y
+           CONFIG_PACKAGE_kmod-ipt-connmark=y
+           EOF
           make defconfig
 
       - name: Download sources
