@@ -97,15 +97,20 @@ jobs:
       - name: Download sources
         run: |
           cd openwrt
-          make download -j$(nproc)
-        timeout-minutes: 30
+          for i in 1 2 3; do
+            echo "=== Download attempt $i ==="
+            make download -j$(nproc) && break
+            echo "Download failed, retrying in 10s..."
+            sleep 10
+          done
+        timeout-minutes: 45
 
       - name: Build kernel modules only
         run: |
           cd openwrt
           make -j$(nproc) tools/install toolchain/install V=s 2>&1 | tee build.log
           make -j$(nproc) target/linux/compile V=s 2>&1 | tee -a build.log
-        timeout-minutes: 90
+        timeout-minutes: 120
 
       - name: Collect kernel modules
         if: always()
