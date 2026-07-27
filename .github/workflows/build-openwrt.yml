@@ -77,19 +77,19 @@ jobs:
           CONFIG_OPENSSL_WITH_POLY1305=y
           CONFIG_PACKAGE_mtd-utils=y
           CONFIG_PACKAGE_kmod-mtd-rw=n
-           CONFIG_PACKAGE_nand-utils=y
-           CONFIG_PACKAGE_kmod-ipt-nfqueue=y
-           CONFIG_PACKAGE_kmod-nfnetlink-queue=y
-           CONFIG_PACKAGE_kmod-nft-compat=y
-           CONFIG_PACKAGE_kmod-ipt-core=y
-           CONFIG_PACKAGE_kmod-ip6tables=y
-           CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
-           CONFIG_PACKAGE_kmod-ipt-extra=y
-           CONFIG_PACKAGE_kmod-ipt-filter=y
-           CONFIG_PACKAGE_kmod-ipt-ipopt=y
-           CONFIG_PACKAGE_kmod-ipt-nat6=y
-           CONFIG_PACKAGE_kmod-ip6tables-extra=y
-           EOF
+          CONFIG_PACKAGE_nand-utils=y
+          CONFIG_PACKAGE_kmod-ipt-nfqueue=y
+          CONFIG_PACKAGE_kmod-nfnetlink-queue=y
+          CONFIG_PACKAGE_kmod-nft-compat=y
+          CONFIG_PACKAGE_kmod-ipt-core=y
+          CONFIG_PACKAGE_kmod-ip6tables=y
+          CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
+          CONFIG_PACKAGE_kmod-ipt-extra=y
+          CONFIG_PACKAGE_kmod-ipt-filter=y
+          CONFIG_PACKAGE_kmod-ipt-ipopt=y
+          CONFIG_PACKAGE_kmod-ipt-nat6=y
+          CONFIG_PACKAGE_kmod-ip6tables-extra=y
+          EOF
           make defconfig
 
       - name: Download sources
@@ -98,38 +98,38 @@ jobs:
           make download -j$(nproc)
         timeout-minutes: 30
 
-      - name: Build
+      - name: Build kernel modules only
         run: |
           cd openwrt
-          make -j$(nproc) V=s 2>&1 | tee build.log
-        timeout-minutes: 240
+          make -j$(nproc) tools/install toolchain/install V=s 2>&1 | tee build.log
+          make -j$(nproc) target/linux/compile V=s 2>&1 | tee -a build.log
+        timeout-minutes: 90
 
-      - name: Collect artifacts
+      - name: Collect kernel modules
         if: always()
         run: |
-          mkdir -p artifacts
-          find openwrt/bin/targets/mediatek/filogic/ -type f 2>/dev/null | head -30 | tee artifacts/filelist.txt
-          cp openwrt/bin/targets/mediatek/filogic/openwrt-*-netcraze_nc-1812-* artifacts/ 2>/dev/null || true
-          cp openwrt/bin/targets/mediatek/filogic/*.manifest artifacts/ 2>/dev/null || true
+          mkdir -p artifacts/kmods
+          # Find compiled .ko files
+          find openwrt/build_dir/target-*/linux-mediatek_filogic/linux-*/ -name '*.ko' -type f 2>/dev/null | head -50 | tee artifacts/kmods/modules-list.txt
+          # Find kmod .ipk packages
+          find openwrt/bin/packages -name 'kmod-*.ipk' -type f 2>/dev/null | head -30 | tee -a artifacts/kmods/modules-list.txt
+          find openwrt/bin/targets -name 'kmod-*.ipk' -type f 2>/dev/null | head -30 | tee -a artifacts/kmods/modules-list.txt
+          # Copy .ko files
+          for f in $(find openwrt/build_dir/target-*/linux-mediatek_filogic/linux-*/ -name '*.ko' -type f 2>/dev/null); do
+            cp "$f" artifacts/kmods/ 2>/dev/null || true
+          done
+          # Copy .ipk packages
+          find openwrt/bin -name 'kmod-*.ipk' -type f -exec cp {} artifacts/kmods/ \; 2>/dev/null || true
+          # Also copy the kernel .config for reference
+          cp openwrt/.config artifacts/kmods/kernel.config 2>/dev/null || true
+          # Copy build log
           cp openwrt/build.log artifacts/ 2>/dev/null || true
-          # Save config for debugging
-          cp openwrt/.config artifacts/ 2>/dev/null || true
-          # Collect nandwrite and flash_erase from staging
-          find openwrt/build_dir/target-*/ -name "nandwrite" -type f 2>/dev/null | head -5
-          find openwrt/build_dir/target-*/ -name "flash_erase" -type f 2>/dev/null | head -5
-          find openwrt/staging_dir/toolchain-*/ -name "nandwrite" -o -name "flash_erase" 2>/dev/null | head -5
-          # Find mtd-utils binaries in ipkg or staging
-          find openwrt -path "*/mtd-utils*" -name "nandwrite" -type f 2>/dev/null | head -5
-          find openwrt -path "*/mtd-utils*" -name "flash_erase" -type f 2>/dev/null | head -5
-          # Copy if found
-          cp $(find openwrt -path "*/mtd-utils*" -name "nandwrite" -type f 2>/dev/null | head -1) artifacts/ 2>/dev/null || echo "nandwrite not found"
-          cp $(find openwrt -path "*/mtd-utils*" -name "flash_erase" -type f 2>/dev/null | head -1) artifacts/ 2>/dev/null || echo "flash_erase not found"
           echo "=== Artifacts ==="
-          ls -la artifacts/
+          ls -laR artifacts/
 
-      - name: Upload firmware
+      - name: Upload kernel modules
         uses: actions/upload-artifact@v4
         with:
-          name: openwrt-netcraze-nc1812
+          name: openwrt-nc1812-kmods
           path: artifacts/
           retention-days: 30
