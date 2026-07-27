@@ -81,6 +81,17 @@ CONFIG_BTRFS_PROGS_ZSTD=y
 CONFIG_ZSTD_OPTIMIZE_O3=y
 CONFIG_OPENSSL_WITH_CHACHA20=y
 CONFIG_OPENSSL_WITH_POLY1305=y
+CONFIG_PACKAGE_kmod-ipt-nfqueue=y
+CONFIG_PACKAGE_kmod-nfnetlink-queue=y
+CONFIG_PACKAGE_kmod-nft-compat=y
+CONFIG_PACKAGE_kmod-ipt-core=y
+CONFIG_PACKAGE_kmod-ip6tables=y
+CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
+CONFIG_PACKAGE_kmod-ipt-extra=y
+CONFIG_PACKAGE_kmod-ipt-filter=y
+CONFIG_PACKAGE_kmod-ipt-ipopt=y
+CONFIG_PACKAGE_kmod-ipt-nat6=y
+CONFIG_PACKAGE_kmod-ip6tables-extra=y
 EOF
 make defconfig
 
